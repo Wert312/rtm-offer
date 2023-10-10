@@ -82,7 +82,6 @@ body {
   display: flex;
   justify-content: flex-end;
   color: #777777;
-  cursor: pointer;
 }
 @media (min-width: 768px) {
   .page__menu-content-close-btn-wrapper {
@@ -100,6 +99,7 @@ body {
 }
 .page__menu-content-close-btn-image {
   display: flex;
+  cursor: pointer;
 }
 .page__menu-content-list {
   padding: 0;

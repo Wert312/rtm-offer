@@ -80,7 +80,6 @@ body {
           display: flex;
           justify-content: flex-end;
           color: #777777;
-          cursor: pointer;
 
           @include for-tablet {
             position: absolute;
@@ -98,6 +97,7 @@ body {
 
         &-image {
           display: flex;
+          cursor: pointer;
         }
       }
 
