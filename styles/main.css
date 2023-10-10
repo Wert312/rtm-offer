@@ -187,7 +187,6 @@ body {
   display: flex;
   align-items: center;
   gap: 4px;
-  cursor: pointer;
 }
 @media (min-width: 768px) {
   .rtm__main-menu-mobile {
@@ -200,6 +199,7 @@ body {
   .rtm__main-menu-mobile {
     padding-top: 38px;
     padding-bottom: 30px;
+    cursor: pointer;
   }
 }
 @media (min-width: 1200px) {

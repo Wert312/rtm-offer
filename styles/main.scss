@@ -187,7 +187,6 @@ body {
       display: flex;
       align-items: center;
       gap: 4px;
-      cursor: pointer;
 
       @include for-tablet {
         gap: 8px;
@@ -198,6 +197,7 @@ body {
       @include for-desktop {
         padding-top: 38px;
         padding-bottom: 30px;
+        cursor: pointer;
       }
 
       @include for-desktop-large {
