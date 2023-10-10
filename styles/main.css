@@ -25,11 +25,14 @@ body {
   height: 100%;
 }
 .menu-active::after {
+  z-index: 1000;
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url("../../rtm-offer/assets/body-blur-background.png") no-repeat;
+  opacity: 1;
+  background: linear-gradient(132deg, rgb(0, 201, 214) 28.5%, rgb(73, 50, 217) 98.72%);
+  backdrop-filter: blur(35px);
   background-size: cover;
 }
 
@@ -80,7 +83,9 @@ body {
 }
 .page__menu-content-close-btn-wrapper {
   display: flex;
-  justify-content: flex-end;
+  width: auto;
+  height: auto;
+  margin-left: auto;
   color: #777777;
 }
 @media (min-width: 768px) {
@@ -95,11 +100,11 @@ body {
     border: 2px solid black;
     border-radius: 6px;
     color: black;
+    cursor: pointer;
   }
 }
 .page__menu-content-close-btn-image {
   display: flex;
-  cursor: pointer;
 }
 .page__menu-content-list {
   padding: 0;
