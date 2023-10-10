@@ -8,15 +8,47 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <title>RTM Offer</title>
 </head>
 <body>
-<div class="page-container">
+<div id="page-menu" class="page__menu">
+    <div class="page__menu-content">
+        <div class="page__menu-content-close-btn-wrapper">
+            <div id="menu-close-btn" class="page__menu-content-close-btn-image">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 0.646484L20.799 20.4455" stroke="currentColor" stroke-linecap="round"/>
+                    <path d="M1 21.1523L20.799 1.35335" stroke="currentColor" stroke-linecap="round"/>
+                </svg>
+            </div>
+        </div>
+        <ul class="page__menu-content-list">
+            <li class="page__menu-content-list-item">
+                Price list
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="26" viewBox="0 0 15 26" fill="none">
+                    <path d="M2.62402 2.5L13.124 13L2.62402 23.5" stroke="#777777" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </li>
+            <li class="page__menu-content-list-item">
+                Bonus programme
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="26" viewBox="0 0 15 26" fill="none">
+                    <path d="M2.62402 2.5L13.124 13L2.62402 23.5" stroke="#777777" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </li>
+            <li class="page__menu-content-list-item">
+                Contacts
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="26" viewBox="0 0 15 26" fill="none">
+                    <path d="M2.62402 2.5L13.124 13L2.62402 23.5" stroke="#777777" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="page__container">
     <header class="rtm__main-header">
         <nav class="rtm__main-navbar">
             <div class="rtm__main-menu-wrapper">
-                <div class="rtm__main-menu-mobile">
+                <div id="menu-button" class="rtm__main-menu-mobile">
                     <img src="../rtm-offer/assets/mobile-menu.svg" alt="mobile menu svg">
                     Menu
                 </div>
@@ -51,5 +83,19 @@
         <p class="rtm__main-footer-copyright">2022 - 2023 Ready To Mine. All about mining equipment</p>
     </footer>
 </div>
+<script>
+    const menu = document.querySelector('#page-menu');
+    const menuBtn = document.querySelector('#menu-button');
+    const menuCloseBtn = document.querySelector('#menu-close-btn');
+
+    menuBtn.addEventListener('click', () => {
+        menu.classList.add('page__menu--active')
+        document.body.classList.add('menu-active')
+    });
+    menuCloseBtn.addEventListener('click', () => {
+        menu.classList.remove('page__menu--active')
+        document.body.classList.remove('menu-active')
+    });
+</script>
 </body>
 </html>
