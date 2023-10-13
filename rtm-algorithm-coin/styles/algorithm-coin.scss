@@ -339,11 +339,12 @@ body {
         overflow: hidden;
         appearance: none;
         background: white;
+        border: 1px solid #EBFAFF;
+        border-radius: 6px;
+        height: 16px;
 
         &::-webkit-progress-bar {
           background: white;
-          height: 16px;
-          border: 1px solid #EBFAFF;
           border-radius: 6px;
         }
 
@@ -352,10 +353,8 @@ body {
         }
 
         &::-moz-progress-bar {
-          background: white;
-          height: 16px;
-          border: 1px solid #EBFAFF;
-          border-radius: 6px;
+          background: linear-gradient(90deg, #B276FF 0%, #FEAB00 97.75%);
+          appearance: none;
         }
       }
     }
