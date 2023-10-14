@@ -12,6 +12,7 @@ html, body {
 
 body {
   background: #EBFAFF;
+  display: grid;
   position: relative;
 }
 
@@ -548,6 +549,7 @@ body {
     }
 
     &-footer {
+      align-self: flex-end;
       padding-bottom: 22px;
 
       @include for-tablet {
