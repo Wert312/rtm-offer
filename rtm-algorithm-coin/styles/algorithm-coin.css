@@ -274,6 +274,7 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
 }
 .rtm__main-content-wrapper {
   margin-top: 32px;
@@ -400,6 +401,7 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
 }
 @media (min-width: 768px) {
   .rtm__main-algorithms-item-title {

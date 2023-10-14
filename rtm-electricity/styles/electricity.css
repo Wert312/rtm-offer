@@ -273,6 +273,7 @@ body {
 .rtm__main-menu-language-selector--active {
   background: linear-gradient(90deg, #B276FF 0%, #FEAB00 97.75%);
   background-clip: text;
+  -webkit-box-decoration-break: clone;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -372,6 +373,7 @@ body {
   font-weight: 500;
   background: linear-gradient(90deg, rgb(255, 204, 126) 0%, rgb(50, 0, 250) 100%);
   background-clip: text;
+  -webkit-box-decoration-break: clone;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   border-radius: 16px;
@@ -390,6 +392,7 @@ body {
   font-weight: 500;
   background: linear-gradient(90deg, rgb(255, 204, 126) 0%, rgb(50, 0, 250) 100%);
   background-clip: text;
+  -webkit-box-decoration-break: clone;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   border-radius: 16px;

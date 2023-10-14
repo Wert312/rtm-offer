@@ -273,6 +273,7 @@ body {
         &--active {
           background: linear-gradient(90deg, #B276FF 0%, #FEAB00 97.75%);
           background-clip: text;
+          -webkit-box-decoration-break: clone;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
@@ -382,6 +383,7 @@ body {
           font-weight: 500;
           background: linear-gradient(90deg, rgba(255,204,126,1) 0%, rgba(50,0,250,1) 100%);
           background-clip: text;
+          -webkit-box-decoration-break: clone;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           border-radius: 16px;
@@ -401,6 +403,7 @@ body {
           font-weight: 500;
           background: linear-gradient(90deg, rgba(255,204,126,1) 0%, rgba(50,0,250,1) 100%);
           background-clip: text;
+          -webkit-box-decoration-break: clone;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           border-radius: 16px;
