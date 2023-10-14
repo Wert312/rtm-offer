@@ -13,8 +13,7 @@ html, body {
 
 body {
   background: #EBFAFF;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   position: relative;
 }
 
@@ -470,6 +469,7 @@ body {
     }
 
     &-footer {
+      align-self: flex-end;
       padding-bottom: 22px;
 
       @include for-tablet {

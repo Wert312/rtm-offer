@@ -11,8 +11,7 @@ html, body {
 
 body {
   background: #EBFAFF;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   position: relative;
 }
 
@@ -458,6 +457,7 @@ body {
   left: 2px;
 }
 .rtm__main-footer {
+  align-self: flex-end;
   padding-bottom: 22px;
 }
 @media (min-width: 768px) {
