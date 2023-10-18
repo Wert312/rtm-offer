@@ -24,6 +24,15 @@ body {
   flex-direction: column;
   flex-grow: 1;
   position: relative;
+
+  a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    &:visited {
+      color: inherit;
+    }
+  }
 }
 
 .menu-active {
@@ -402,11 +411,6 @@ body {
 
           &-textbox {
             font-weight: 500;
-            background: linear-gradient(90deg, rgba(255,204,126,1) 0%, rgba(50,0,250,1) 40%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            -webkit-box-decoration-break: clone;
             display: inline-block;
             overflow: hidden;
             min-width: 100%;

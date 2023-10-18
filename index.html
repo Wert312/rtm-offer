@@ -9,39 +9,39 @@
     <title>RTM Offer</title>
 </head>
 <body>
-<div id="page-menu" class="page__menu">
-    <div class="page__menu-content">
-        <div id="menu-close-btn" class="page__menu-content-close-btn-wrapper">
-            <div class="page__menu-content-close-btn-image">
+<div id="main-menu" class="main__menu">
+    <div class="main__menu-content">
+        <div id="menu-close-btn" class="main__menu-content-close-btn-wrapper">
+            <div class="main__menu-content-close-btn-image">
                 <svg width="22" height="22" viewBox="0 0 22 22" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 0.646484L20.799 20.4455" stroke="currentColor" stroke-linecap="round"/>
                     <path d="M1 21.1523L20.799 1.35335" stroke="currentColor" stroke-linecap="round"/>
                 </svg>
             </div>
         </div>
-        <ul class="page__menu-content-list">
-            <li class="page__menu-content-list-item">
+        <ul class="main__menu-content-list">
+            <a href="../rtm-offer/rtm-price-list/price-list.html" class="main__menu-content-list-item">
                 Price list
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="26" viewBox="0 0 15 26" fill="none">
                     <path d="M2.62402 2.5L13.124 13L2.62402 23.5" stroke="#777777" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-            </li>
-            <li class="page__menu-content-list-item">
+            </a>
+            <a class="main__menu-content-list-item">
                 Bonus programme
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="26" viewBox="0 0 15 26" fill="none">
                     <path d="M2.62402 2.5L13.124 13L2.62402 23.5" stroke="#777777" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-            </li>
-            <li class="page__menu-content-list-item">
+            </a>
+            <a class="main__menu-content-list-item">
                 Contacts
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="26" viewBox="0 0 15 26" fill="none">
                     <path d="M2.62402 2.5L13.124 13L2.62402 23.5" stroke="#777777" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-            </li>
+            </a>
         </ul>
     </div>
 </div>
-<div class="page__container">
+<div class="main__container">
     <header class="rtm__main-header">
         <nav class="rtm__main-navbar">
             <div class="rtm__main-menu-wrapper">
@@ -53,7 +53,7 @@
                     </svg>
                     Menu
                 </div>
-                <p class="rtm__main-menu-logo">ReadyToMine</p>
+                <a href="../rtm-offer/index.html"><p class="rtm__main-menu-logo">ReadyToMine</p></a>
                 <div class="rtm__main-menu-language-selector-wrapper">
                     <div class="rtm__main-menu-language-selector rtm__main-menu-language-selector--active">En</div>
                     <div class="rtm__main-menu-language-selector">Ru</div>
@@ -61,40 +61,46 @@
             </div>
         </nav>
     </header>
-    <div class="rtm__main-content-wrapper">
-        <div class="rtm__main-logo rtm__main-logo--explore">
-            <div class="rtm__main-logo-wrapper">
-                <h1 class="rtm__main-logo-title">
-                    Explore
-                </h1>
-                <img src="rtm-main/assets/bitcoin.svg" alt="bitcoin title">
+    <div class="container">
+        <div class="slider js-slider">
+            <div class="slide slide-1 active">
+                <div class="rtm__main-content-wrapper">
+                    <div class="rtm__main-logo rtm__main-logo--explore">
+                        <div class="rtm__main-logo-wrapper">
+                            <h1 class="rtm__main-logo-title">
+                                Explore
+                            </h1>
+                            <img src="rtm-main/assets/bitcoin.svg" alt="bitcoin title">
+                        </div>
+                        <p class="rtm__main-logo-text">With ReadyToMine Team</p>
+                    </div>
+                    <div class="rtm__main-logo rtm__main-logo--welcome">
+                        <img src="rtm-main/assets/welcome-logo.svg" alt="welcome logo svg">
+                    </div>
+                    <button class="rtm__main-btn">
+                        <a href="../rtm-offer/rtm-algorithm-coin/algorithm-coin.html" class="rtm__main-btn-text">
+                            Click to start
+                        </a>
+                    </button>
+                </div>
             </div>
-            <p class="rtm__main-logo-text">With ReadyToMine Team</p>
         </div>
-        <div class="rtm__main-logo rtm__main-logo--welcome">
-            <img src="rtm-main/assets/welcome-logo.svg" alt="welcome logo svg">
-        </div>
-        <button class="rtm__main-btn">
-            <a href="../rtm-offer/rtm-algorithm-coin/algorithm-coin.html" class="rtm__main-btn-text">
-                Click to start
-            </a>
-        </button>
     </div>
     <footer class="rtm__main-footer">
         <p class="rtm__main-footer-copyright">2022 - 2023 Ready To Mine. All about mining equipment</p>
     </footer>
 </div>
 <script>
-    const menu = document.querySelector('#page-menu');
+    const menu = document.querySelector('#main-menu');
     const menuBtn = document.querySelector('#menu-button');
     const menuCloseBtn = document.querySelector('#menu-close-btn');
 
     menuBtn.addEventListener('click', () => {
-        menu.classList.add('page__menu--active')
+        menu.classList.add('main__menu--active')
         document.body.classList.add('menu-active')
     });
     menuCloseBtn.addEventListener('click', () => {
-        menu.classList.remove('page__menu--active')
+        menu.classList.remove('main__menu--active')
         document.body.classList.remove('menu-active')
     });
 </script>

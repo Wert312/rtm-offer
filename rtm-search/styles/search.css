@@ -23,6 +23,14 @@ body {
   flex-grow: 1;
   position: relative;
 }
+body a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+body a:visited {
+  color: inherit;
+}
 
 .menu-active {
   overflow-y: hidden;
@@ -392,11 +400,6 @@ body {
 }
 .rtm__search-input-content-field-textbox {
   font-weight: 500;
-  background: linear-gradient(90deg, rgb(255, 204, 126) 0%, rgb(50, 0, 250) 40%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-box-decoration-break: clone;
   display: inline-block;
   overflow: hidden;
   min-width: 100%;
