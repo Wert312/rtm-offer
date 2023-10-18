@@ -263,6 +263,7 @@ body {
       &-selector {
         position: relative;
         cursor: pointer;
+        display: inline-block;
         &:hover {
           color: rgba(124, 124, 124, 1);
         }

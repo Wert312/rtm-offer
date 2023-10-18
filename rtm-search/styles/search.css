@@ -260,6 +260,7 @@ body a:visited {
 .rtm__search-menu-language-selector {
   position: relative;
   cursor: pointer;
+  display: inline-block;
 }
 .rtm__search-menu-language-selector:hover {
   color: rgb(124, 124, 124);
