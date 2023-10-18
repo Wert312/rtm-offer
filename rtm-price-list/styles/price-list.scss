@@ -8,7 +8,6 @@
 
 html, body {
   width: 100%;
-  height: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -18,6 +17,15 @@ html, body {
 body {
   background: #EBFAFF;
   position: relative;
+
+  a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    &:visited {
+      color: inherit;
+    }
+  }
 }
 
 .menu-active {
@@ -225,6 +233,13 @@ body {
       font-size: 18px;
       font-style: normal;
       font-weight: 500;
+      &:hover {
+        color: rgba(124, 124, 124, 1);
+      }
+
+      &:active {
+        color: rgba(188, 188, 188, 1);
+      }
 
       @include for-tablet {
         font-size: 20px;
