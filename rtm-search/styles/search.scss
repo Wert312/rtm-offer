@@ -1,4 +1,4 @@
-@import "../../../rtm-offer/fonts/fonts.css";
+@import "../../../rtm-offer/fonts/search-fonts.css";
 @import "mixins";
 @import "normalize.css";
 
@@ -8,13 +8,21 @@
 
 html, body {
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   font-family: "Roboto", sans-serif;
+}
+
+.container {
+  max-width: 1200px !important;
 }
 
 body {
   background: #EBFAFF;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   position: relative;
 }
 
@@ -146,9 +154,7 @@ body {
     padding: 0 12px 0;
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 
     @include for-tablet {
       padding: 0 36px 0;
@@ -173,7 +179,7 @@ body {
 }
 
 .rtm {
-  &__main-menu {
+  &__search-menu {
     &-wrapper {
       display: flex;
       justify-content: space-between;
@@ -196,6 +202,7 @@ body {
       &:hover {
         color: rgba(124, 124, 124, 1);
       }
+
       &:active {
         color: rgba(188, 188, 188, 1);
       }
@@ -283,19 +290,19 @@ body {
         &--active {
           background: linear-gradient(90deg, #B276FF 0%, #FEAB00 97.75%);
           background-clip: text;
+          -webkit-box-decoration-break: clone;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
-          -webkit-box-decoration-break: clone;
         }
       }
     }
   }
 
-  &__main {
+  &__search {
     &-content-wrapper {
       margin-top: 32px;
-      margin-bottom: 24px;
-      padding: 12px 10px 24px;
+      margin-bottom: 5px;
+      padding: 12px 10px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -304,17 +311,12 @@ body {
 
       @include for-tablet {
         margin-top: 20px;
-        margin-bottom: 32px;
-        padding: 12px 22px 30px;
-      }
-
-      @include for-desktop {
-        margin-bottom: 30px;
+        margin-bottom: 12px;
+        padding: 12px 20px 25px;
       }
 
       @include for-desktop-large {
         margin-top: 60px;
-        margin-bottom: 50px;
         padding: 12px 38px 40px;
       }
 
@@ -372,7 +374,7 @@ body {
       }
     }
 
-    &-asic {
+    &-input {
       &-wrapper {
         width: 100%;
         display: flex;
@@ -381,55 +383,97 @@ body {
       }
 
       &-content {
-        display: flex;
-        gap: 7.5px;
-        justify-content: space-between;
-
-        &-button {
-          height: 73px;
-          width: 40px;
-          background: white;
-          font-size: 40px;
-          font-weight: 500;
-          border-radius: 16px;
-          border: 0.5px solid #000;
-          padding: 0;
-          display: flex;
+        width: 100%;
+        &-field {
+          width: 100%;
+          display: grid;
+          grid-template-columns: 1fr auto;
           align-items: center;
-          justify-content: center;
-          cursor: pointer;
-          &:hover {
-            background: #F8F8F8;
-          }
-          &:active {
-            background: #F5F4F4;
+          position: relative;
+          min-height: 56px;
+          padding: 0 20px;
+          border-radius: 16px;
+          border: 1px solid #000;
+
+          @include for-tablet {
+            min-height: 73px;
+            padding: 0 60px;
           }
 
-          &-text {
-            background: linear-gradient(90deg, rgba(255,204,126,1) 0%, rgba(50,0,250,1) 100%);
+          &-textbox {
+            font-weight: 500;
+            background: linear-gradient(90deg, rgba(255,204,126,1) 0%, rgba(50,0,250,1) 40%);
             background-clip: text;
-            -webkit-box-decoration-break: clone;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            -webkit-box-decoration-break: clone;
+            display: inline-block;
+            overflow: hidden;
+            min-width: 100%;
+            white-space: nowrap;
+            font-size: 20px;
+            letter-spacing: 0.4px;
           }
-        }
 
-        &-value {
-          height: 73px;
-          width: 114px;
-          background: white;
-          font-size: 40px;
-          font-weight: 500;
-          background: linear-gradient(90deg, rgba(255,204,126,1) 0%, rgba(50,0,250,1) 100%);
-          background-clip: text;
-          -webkit-box-decoration-break: clone;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          border-radius: 16px;
-          border: 0.5px solid #000;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          [contenteditable="true"]:focus {
+            outline: white;
+            border-color: white;
+          }
+
+          &-icon {
+            margin-left: 10px;
+            img {
+              height: 24px;
+              width: 24px;
+
+              @include for-tablet {
+                height: 28px;
+                width: 28px;
+              }
+            }
+          }
+
+          &-results {
+            position: absolute;
+            display: none;
+            width: 100%;
+            overscroll-behavior: contain;
+            max-height: 214px;
+            top: 0;
+            margin-top: 59px;
+            padding: 18px 45px 0 20px;
+            border-radius: 16px;
+            border: 1px solid #CFCFCF;
+            background: #FCFCFC;
+            overflow-y: auto;
+
+            @include for-tablet {
+              padding: 18px 60px;
+              margin-top: 76px;
+            }
+
+            &--shown {
+              display: block;
+            }
+
+            &-item {
+              font-family: "Inter", sans-serif;
+              font-weight: 400;
+              color: #373737;
+              font-size: 16px;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              overflow: hidden;
+              cursor: pointer;
+              &:hover {
+                color: #959595;
+              }
+
+              &:not(:last-of-type) {
+                margin-bottom: 18px;
+              }
+            }
+          }
         }
       }
 
@@ -453,51 +497,9 @@ body {
       }
     }
 
-    &-buttons {
-      display: flex;
-      width: 170px;
-      height: 55px;
-      justify-content: space-between;
-      margin: 0 auto 0;
-    }
-
-    &-button {
-      width: 50px;
-      height: 55px;
-      border: 0.5px solid black;
-      border-radius: 16px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: white;
-      padding: 0;
-      margin-bottom: 50px;
-      cursor: pointer;
-      &:hover {
-        background: #F8F8F8;
-      }
-      &:active {
-        background: #F5F4F4;
-      }
-
-      &--left {
-        img {
-          position: relative;
-          right: 2px;
-        }
-      }
-
-      &--right {
-        img {
-          position: relative;
-          left: 2px;
-        }
-      }
-    }
-
     &-footer {
-      align-self: flex-end;
+      width: 100%;
+      margin-top: auto;
       padding-bottom: 22px;
 
       @include for-tablet {
@@ -521,6 +523,157 @@ body {
         font-size: 10px;
         font-weight: 500;
         text-align: center;
+      }
+    }
+  }
+
+  &__price-list {
+    &-wrapper {
+      padding: 20px 10px;
+      border-radius: 12px;
+      background: #FFF;
+
+      @include for-tablet {
+        padding: 30px 20px;
+      }
+
+      @include for-desktop-large {
+        padding: 40px 38px 48px;
+      }
+
+      @include for-desktop-xl {
+        padding: 40px 50px 48px;
+      }
+    }
+
+    &-content {
+      gap: 20px;
+      display: flex;
+      flex-direction: column;
+      overflow-x: auto;
+
+      @include for-tablet {
+        gap: 20px;
+      }
+    }
+
+    &-row {
+      font-family: "Inter", sans-serif;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      min-width: 426px;
+      width: 100%;
+      padding: 0 20px;
+      min-height: 40px;
+      gap: 20px;
+      border-radius: 10px;
+      align-items: center;
+      border: 1px solid rgba(207, 207, 207, 0.81);
+      cursor: pointer;
+      &:hover {
+        background: #F8F8F8;
+      }
+
+      &:active {
+        background: #F5F4F4;
+      }
+
+      @include for-tablet {
+        min-height: 56px;
+      }
+
+      @include for-desktop {
+        padding: 0 27px;
+      }
+
+      @include for-desktop-large {
+        padding: 0 78px 0 54px;
+      }
+
+      @include for-desktop-xl {
+        padding: 0 102px 0 30px;
+      }
+
+      &-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      &--header {
+        border: none;
+        height: auto;
+        min-height: auto;
+        cursor: initial;
+
+        &:hover {
+          background: white;
+        }
+
+        &:active {
+          background: white;
+        }
+      }
+
+      &-item {
+        font-size: 12px;
+        color: #373737;
+        font-weight: 700;
+        max-width: 100%;
+        justify-self: flex-end;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        padding: 6px 0;
+        text-align: right;
+
+        @include for-tablet {
+          font-size: 16px;
+        }
+
+        @include for-desktop-large {
+          font-size: 18px;
+        }
+
+        &:nth-of-type(3) {
+          text-overflow: initial;
+          white-space: initial;
+          overflow: initial;
+          word-break: break-word;
+        }
+
+        &:first-of-type {
+          justify-self: flex-start;
+        }
+
+        &--header {
+          color: #777;
+          font-size: 14px;
+          font-weight: 400;
+          padding: 0;
+
+          @include for-tablet {
+            font-size: 18px;
+          }
+        }
+      }
+
+      &-title {
+        color: #FEAB00;
+        font-size: 14px;
+        padding-left: 8px;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        font-weight: 500;
+
+        @include for-tablet {
+          font-size: 20px;
+          margin-top: 40px;
+        }
+
+        @include for-desktop-large {
+          padding-left: 30px;
+        }
       }
     }
   }

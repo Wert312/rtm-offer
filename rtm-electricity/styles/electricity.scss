@@ -1,3 +1,4 @@
+@import "../../../rtm-offer/fonts/fonts.css";
 @import "mixins";
 @import "normalize.css";
 
@@ -192,6 +193,13 @@ body {
       display: flex;
       align-items: center;
       gap: 4px;
+      &:hover {
+        color: rgba(124, 124, 124, 1);
+      }
+
+      &:active {
+        color: rgba(188, 188, 188, 1);
+      }
 
       @include for-tablet {
         gap: 8px;
@@ -233,6 +241,9 @@ body {
       &-selector {
         position: relative;
         cursor: pointer;
+        &:hover {
+          color: rgba(124, 124, 124, 1);
+        }
 
         &:first-of-type {
           &::after {
@@ -381,11 +392,6 @@ body {
           background: white;
           font-size: 40px;
           font-weight: 500;
-          background: linear-gradient(90deg, rgba(255,204,126,1) 0%, rgba(50,0,250,1) 100%);
-          background-clip: text;
-          -webkit-box-decoration-break: clone;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
           border-radius: 16px;
           border: 0.5px solid #000;
           padding: 0;
@@ -393,6 +399,20 @@ body {
           align-items: center;
           justify-content: center;
           cursor: pointer;
+          &:hover {
+            background: #F8F8F8;
+          }
+          &:active {
+            background: #F5F4F4;
+          }
+
+          &-text {
+            background: linear-gradient(90deg, rgba(255,204,126,1) 0%, rgba(50,0,250,1) 100%);
+            background-clip: text;
+            -webkit-box-decoration-break: clone;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
         }
 
         &-value {
@@ -465,6 +485,12 @@ body {
       padding: 0;
       margin-bottom: 50px;
       cursor: pointer;
+      &:hover {
+        background: #F8F8F8;
+      }
+      &:active {
+        background: #F5F4F4;
+      }
 
       &--left {
         img {

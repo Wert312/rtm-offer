@@ -1,3 +1,4 @@
+@import "../../../rtm-offer/fonts/fonts.css";
 @import "normalize.css";
 * {
   box-sizing: border-box;
@@ -193,6 +194,12 @@ body {
   align-items: center;
   gap: 4px;
 }
+.rtm__main-menu-mobile:hover {
+  color: rgb(124, 124, 124);
+}
+.rtm__main-menu-mobile:active {
+  color: rgb(188, 188, 188);
+}
 @media (min-width: 768px) {
   .rtm__main-menu-mobile {
     gap: 8px;
@@ -235,6 +242,9 @@ body {
 .rtm__main-menu-language-selector {
   position: relative;
   cursor: pointer;
+}
+.rtm__main-menu-language-selector:hover {
+  color: rgb(124, 124, 124);
 }
 .rtm__main-menu-language-selector:first-of-type::after {
   content: "";
@@ -417,6 +427,12 @@ body {
   background: white;
   cursor: pointer;
   margin-bottom: 55px;
+}
+.rtm__main-btn:hover {
+  background: #F8F8F8;
+}
+.rtm__main-btn:active {
+  background: #F5F4F4;
 }
 .rtm__main-btn-text {
   background: linear-gradient(93deg, #FFCC7E -3.26%, #0500FA 118.87%), #000;

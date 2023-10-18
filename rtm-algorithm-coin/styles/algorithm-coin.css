@@ -1,3 +1,4 @@
+@import "../../../rtm-offer/fonts/fonts.css";
 @import "normalize.css";
 * {
   box-sizing: border-box;
@@ -5,6 +6,7 @@
 
 html, body {
   width: 100%;
+  height: 100%;
   font-family: "Roboto", sans-serif;
 }
 
@@ -190,6 +192,12 @@ body {
   align-items: center;
   gap: 4px;
 }
+.rtm__main-menu-mobile:hover {
+  color: rgb(124, 124, 124);
+}
+.rtm__main-menu-mobile:active {
+  color: rgb(188, 188, 188);
+}
 @media (min-width: 768px) {
   .rtm__main-menu-mobile {
     gap: 8px;
@@ -232,6 +240,9 @@ body {
 .rtm__main-menu-language-selector {
   position: relative;
   cursor: pointer;
+}
+.rtm__main-menu-language-selector:hover {
+  color: rgb(124, 124, 124);
 }
 .rtm__main-menu-language-selector:first-of-type::after {
   content: "";
@@ -387,11 +398,20 @@ body {
   background: #FFF;
   cursor: pointer;
 }
+.rtm__main-algorithms-item:hover {
+  background: #F8F8F8;
+}
+.rtm__main-algorithms-item:active {
+  background: #F5F4F4;
+}
 @media (min-width: 768px) {
   .rtm__main-algorithms-item {
     padding: 12px 44px;
     gap: 10px;
   }
+}
+.rtm__main-algorithms-item--disabled {
+  opacity: 0.3;
 }
 .rtm__main-algorithms-item-title {
   margin: 0;
@@ -487,6 +507,12 @@ body {
   padding: 12px 24px;
   cursor: pointer;
 }
+.rtm__main-coins-item:hover {
+  background: #F8F8F8;
+}
+.rtm__main-coins-item:active {
+  background: #F5F4F4;
+}
 @media (min-width: 768px) {
   .rtm__main-coins-item {
     padding: 16px 32px;
@@ -523,6 +549,12 @@ body {
   padding: 0;
   margin-bottom: 50px;
   cursor: pointer;
+}
+.rtm__main-button:hover {
+  background: #F8F8F8;
+}
+.rtm__main-button:active {
+  background: #F5F4F4;
 }
 .rtm__main-button--left img {
   position: relative;

@@ -6,9 +6,6 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../rtm-asic/styles/asic.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <title>RTM Offer</title>
 </head>
 <body>
@@ -49,7 +46,11 @@
         <nav class="rtm__main-navbar">
             <div class="rtm__main-menu-wrapper">
                 <div id="menu-button" class="rtm__main-menu-mobile">
-                    <img src="../rtm-asic/assets/mobile-menu.svg" alt="mobile menu svg">
+                    <svg width="29" height="12" viewBox="0 0 29 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1H27.6667" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round"/>
+                        <path d="M1 6H27.6667" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round"/>
+                        <path d="M1 11H27.6667" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round"/>
+                    </svg>
                     Menu
                 </div>
                 <p class="rtm__main-menu-logo">ReadyToMine</p>
@@ -62,16 +63,24 @@
     </header>
     <div class="rtm__main-content-wrapper">
         <div class="rtm__main-progress-wrapper">
-            <p class="rtm__main-progress-title">50% complete</p>
-            <progress max="100" value="50" class="rtm__main-progress-bar"></progress>
+            <p class="rtm__main-progress-title">25% complete</p>
+            <progress max="100" value="25" class="rtm__main-progress-bar"></progress>
         </div>
         <div class="rtm__main-asic-wrapper">
             <p class="rtm__main-asic-title">Enter the ASIC quantity</p>
         </div>
         <div class="rtm__main-asic-content">
-            <button class="rtm__main-asic-content-button">—</button>
+            <button class="rtm__main-asic-content-button">
+                <span class="rtm__main-asic-content-button-text">
+                    —
+                </span>
+            </button>
             <div class="rtm__main-asic-content-value">10</div>
-            <button class="rtm__main-asic-content-button">+</button>
+            <button class="rtm__main-asic-content-button">
+                <span class="rtm__main-asic-content-button-text">
+                    +
+                </span>
+            </button>
         </div>
     </div>
     <div class="rtm__main-buttons">
