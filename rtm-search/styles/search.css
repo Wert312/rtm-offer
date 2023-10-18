@@ -239,6 +239,12 @@ body a:visited {
   font-style: normal;
   font-weight: 500;
 }
+.rtm__search-menu-logo:hover {
+  color: rgb(124, 124, 124);
+}
+.rtm__search-menu-logo:active {
+  color: rgb(188, 188, 188);
+}
 @media (min-width: 768px) {
   .rtm__search-menu-logo {
     font-size: 20px;

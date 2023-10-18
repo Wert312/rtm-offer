@@ -240,6 +240,13 @@ body {
       font-size: 18px;
       font-style: normal;
       font-weight: 500;
+      &:hover {
+        color: rgba(124, 124, 124, 1);
+      }
+
+      &:active {
+        color: rgba(188, 188, 188, 1);
+      }
 
       @include for-tablet {
         font-size: 20px;
