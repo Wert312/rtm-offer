@@ -10,30 +10,30 @@
     <title>RTM Offer</title>
 </head>
 <body class="body-main">
-<div id="page-asic-menu" class="page-asic__menu">
-    <div class="page-asic__menu-content">
-        <div id="menu-close-btn" class="page-asic__menu-content-close-btn-wrapper">
-            <div class="page-asic__menu-content-close-btn-image">
+<div id="main-menu" class="main__menu">
+    <div class="main__menu-content">
+        <div id="menu-close-btn" class="main__menu-content-close-btn-wrapper">
+            <div class="main__menu-content-close-btn-image">
                 <svg width="22" height="22" viewBox="0 0 22 22" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 0.646484L20.799 20.4455" stroke="currentColor" stroke-linecap="round"/>
                     <path d="M1 21.1523L20.799 1.35335" stroke="currentColor" stroke-linecap="round"/>
                 </svg>
             </div>
         </div>
-        <div class="page-asic__menu-content-list">
-            <a href="" class="page-asic__menu-content-list-item">
+        <div class="main__menu-content-list">
+            <a href="" class="main__menu-content-list-item">
                 Price list
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="26" viewBox="0 0 15 26" fill="none">
                     <path d="M2.62402 2.5L13.124 13L2.62402 23.5" stroke="#777777" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </a>
-            <a href="" class="page-asic__menu-content-list-item">
+            <a href="" class="main__menu-content-list-item">
                 Bonus programme
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="26" viewBox="0 0 15 26" fill="none">
                     <path d="M2.62402 2.5L13.124 13L2.62402 23.5" stroke="#777777" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </a>
-            <a href="" class="page-asic__menu-content-list-item">
+            <a href="" class="main__menu-content-list-item">
                 Contacts
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="26" viewBox="0 0 15 26" fill="none">
                     <path d="M2.62402 2.5L13.124 13L2.62402 23.5" stroke="#777777" stroke-linecap="round" stroke-linejoin="round"/>
@@ -42,7 +42,7 @@
         </div>
     </div>
 </div>
-<div class="page-asic__container">
+<div class="main__container">
     <header class="rtm__asic-header">
         <nav class="rtm__asic-navbar">
             <div class="rtm__asic-menu-wrapper">
@@ -99,20 +99,20 @@
         </div>
     </div>
 </div>
-<footer class="rtm__asic-footer">
-    <p class="rtm__asic-footer-copyright">2022 - 2023 Ready To Mine. All about mining equipment</p>
+<footer class="main__footer">
+    <p class="main__footer-copyright">2022 - 2023 Ready To Mine. All about mining equipment</p>
 </footer>
 <script>
-    const menu = document.querySelector('#page-asic-menu');
+    const menu = document.querySelector('#main-menu');
     const menuBtn = document.querySelector('#menu-button');
     const menuCloseBtn = document.querySelector('#menu-close-btn');
 
     menuBtn.addEventListener('click', () => {
-        menu.classList.add('page-asic__menu--active')
+        menu.classList.add('main__menu--active')
         document.body.classList.add('menu-active')
     });
     menuCloseBtn.addEventListener('click', () => {
-        menu.classList.remove('page-asic__menu--active')
+        menu.classList.remove('main__menu--active')
         document.body.classList.remove('menu-active')
     });
 </script>
