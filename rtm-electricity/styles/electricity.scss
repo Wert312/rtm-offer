@@ -6,18 +6,33 @@
   box-sizing: border-box;
 }
 
+.container {
+  max-width: 1200px !important;
+}
+
 html, body {
   width: 100%;
-  height: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   font-family: "Roboto", sans-serif;
 }
 
-body {
+.body-electricity {
   background: #EBFAFF;
+}
+
+body {
   position: relative;
+
+  a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    &:visited {
+      color: inherit;
+    }
+  }
 }
 
 .menu-active {
@@ -37,7 +52,7 @@ body {
   }
 }
 
-.page {
+.page-elec {
   &__menu {
     width: 100%;
     height: 100%;
@@ -175,7 +190,7 @@ body {
 }
 
 .rtm {
-  &__main-menu {
+  &__electricity-menu {
     &-wrapper {
       display: flex;
       justify-content: space-between;
@@ -227,6 +242,14 @@ body {
       font-size: 18px;
       font-style: normal;
       font-weight: 500;
+      cursor: pointer;
+      &:hover {
+        color: rgba(124, 124, 124, 1);
+      }
+
+      &:active {
+        color: rgba(188, 188, 188, 1);
+      }
 
       @include for-tablet {
         font-size: 20px;
@@ -241,6 +264,7 @@ body {
 
     &-language {
       &-selector {
+        display: inline-block;
         position: relative;
         cursor: pointer;
         &:hover {
@@ -294,7 +318,7 @@ body {
     }
   }
 
-  &__main {
+  &__electricity {
     &-content-wrapper {
       margin-top: 32px;
       margin-bottom: 24px;
@@ -395,7 +419,7 @@ body {
           font-size: 40px;
           font-weight: 500;
           border-radius: 16px;
-          border: 0.5px solid #000;
+          border: 1px solid #000;
           padding: 0;
           display: flex;
           align-items: center;
@@ -429,7 +453,7 @@ body {
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           border-radius: 16px;
-          border: 0.5px solid #000;
+          border: 1px solid #000;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -477,7 +501,7 @@ body {
     &-button {
       width: 50px;
       height: 55px;
-      border: 0.5px solid black;
+      border: 1px solid black;
       border-radius: 16px;
       display: flex;
       flex-direction: column;
@@ -511,6 +535,7 @@ body {
 
     &-footer {
       width: 100%;
+      margin-top: auto;
       align-self: flex-end;
       padding-bottom: 22px;
 

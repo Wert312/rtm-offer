@@ -7,14 +7,16 @@
 }
 
 .container {
-  height: 100% !important;
   max-width: 1200px !important;
 }
 
-html, body {
-  min-height: 100vh;
+.html-main {
   height: 100%;
+}
+
+html, body {
   width: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   font-family: "Roboto", sans-serif;
@@ -29,8 +31,11 @@ html, body {
   }
 }
 
-body {
+.body-main {
   background: #EBFAFF;
+}
+
+body {
   position: relative;
 }
 
@@ -236,6 +241,13 @@ body {
       font-size: 18px;
       font-style: normal;
       font-weight: 500;
+      &:hover {
+        color: rgba(124, 124, 124, 1);
+      }
+
+      &:active {
+        color: rgba(188, 188, 188, 1);
+      }
 
       @include for-tablet {
         font-size: 20px;
@@ -250,6 +262,7 @@ body {
 
     &-language {
       &-selector {
+        display: inline-block;
         position: relative;
         cursor: pointer;
         &:hover {
@@ -482,6 +495,9 @@ body {
 
     &-footer {
       display: none;
+      margin-top: auto;
+      width: 100%;
+      align-self: flex-end;
 
       @include for-tablet {
         display: block;

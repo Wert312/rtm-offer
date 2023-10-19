@@ -8,44 +8,44 @@
     <link rel="stylesheet" href="../rtm-electricity/styles/electricity.css">
     <title>RTM Offer</title>
 </head>
-<body>
-<div id="page-menu" class="page__menu">
-    <div class="page__menu-content">
-        <div id="menu-close-btn" class="page__menu-content-close-btn-wrapper">
-            <div class="page__menu-content-close-btn-image">
+<body class="body-electricity">
+<div id="page-elec-menu" class="page-elec__menu">
+    <div class="page-elec__menu-content">
+        <div id="menu-close-btn" class="page-elec__menu-content-close-btn-wrapper">
+            <div class="page-elec__menu-content-close-btn-image">
                 <svg width="22" height="22" viewBox="0 0 22 22" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 0.646484L20.799 20.4455" stroke="currentColor" stroke-linecap="round"/>
                     <path d="M1 21.1523L20.799 1.35335" stroke="currentColor" stroke-linecap="round"/>
                 </svg>
             </div>
         </div>
-        <ul class="page__menu-content-list">
-            <li class="page__menu-content-list-item">
+        <div class="page-elec__menu-content-list">
+            <a class="page-elec__menu-content-list-item">
                 Price list
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="26" viewBox="0 0 15 26" fill="none">
                     <path d="M2.62402 2.5L13.124 13L2.62402 23.5" stroke="#777777" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-            </li>
-            <li class="page__menu-content-list-item">
+            </a>
+            <a class="page-elec__menu-content-list-item">
                 Bonus programme
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="26" viewBox="0 0 15 26" fill="none">
                     <path d="M2.62402 2.5L13.124 13L2.62402 23.5" stroke="#777777" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-            </li>
-            <li class="page__menu-content-list-item">
+            </a>
+            <a class="page-elec__menu-content-list-item">
                 Contacts
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="26" viewBox="0 0 15 26" fill="none">
                     <path d="M2.62402 2.5L13.124 13L2.62402 23.5" stroke="#777777" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-            </li>
-        </ul>
+            </a>
+        </div>
     </div>
 </div>
-<div class="page__container">
-    <header class="rtm__main-header">
-        <nav class="rtm__main-navbar">
-            <div class="rtm__main-menu-wrapper">
-                <div id="menu-button" class="rtm__main-menu-mobile">
+<div class="page-elec__container">
+    <header class="rtm__electricity-header">
+        <nav class="rtm__electricity-navbar">
+            <div class="rtm__electricity-menu-wrapper">
+                <div id="menu-button" class="rtm__electricity-menu-mobile">
                     <svg width="29" height="12" viewBox="0 0 29 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 1H27.6667" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round"/>
                         <path d="M1 6H27.6667" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round"/>
@@ -53,62 +53,68 @@
                     </svg>
                     Menu
                 </div>
-                <p class="rtm__main-menu-logo">ReadyToMine</p>
-                <div class="rtm__main-menu-language-selector-wrapper">
-                    <div class="rtm__main-menu-language-selector rtm__main-menu-language-selector--active">En</div>
-                    <div class="rtm__main-menu-language-selector">Ru</div>
+                <a href="" class="rtm__electricity-menu-logo">ReadyToMine</a>
+                <div class="rtm__electricity-menu-language-selector-wrapper">
+                    <a href="" class="rtm__electricity-menu-language-selector rtm__electricity-menu-language-selector--active">En</a>
+                    <a href="" class="rtm__electricity-menu-language-selector">Ru</a>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="rtm__main-content-wrapper">
-        <div class="rtm__main-progress-wrapper">
-            <p class="rtm__main-progress-title">50% complete</p>
-            <progress max="100" value="50" class="rtm__main-progress-bar"></progress>
-        </div>
-        <div class="rtm__main-electricity-wrapper">
-            <p class="rtm__main-electricity-title">What is your electricity charge?</p>
-        </div>
-        <div class="rtm__main-electricity-content">
-            <button class="rtm__main-electricity-content-button">
-                <span class="rtm__main-electricity-content-button-text">
+    <div class="container">
+        <div class="slider js-slider">
+            <div class="slide slide-1 active">
+                <div class="rtm__electricity-content-wrapper">
+                    <div class="rtm__electricity-progress-wrapper">
+                        <p class="rtm__electricity-progress-title">50% complete</p>
+                        <progress max="100" value="50" class="rtm__electricity-progress-bar"></progress>
+                    </div>
+                    <div class="rtm__electricity-electricity-wrapper">
+                        <p class="rtm__electricity-electricity-title">What is your electricity charge?</p>
+                    </div>
+                    <div class="rtm__electricity-electricity-content">
+                        <button class="rtm__electricity-electricity-content-button">
+                <span class="rtm__electricity-electricity-content-button-text">
                     —
                 </span>
-            </button>
-            <div class="rtm__main-electricity-content-value">2.2</div>
-            <button class="rtm__main-electricity-content-button">
-                <span class="rtm__main-electricity-content-button-text">
+                        </button>
+                        <div class="rtm__electricity-electricity-content-value">2.2</div>
+                        <button class="rtm__electricity-electricity-content-button">
+                <span class="rtm__electricity-electricity-content-button-text">
                     +
                 </span>
-            </button>
+                        </button>
+                    </div>
+                    <p class="rtm__electricity-electricity-subtitle">
+                        please specify in USD
+                    </p>
+                </div>
+                <div class="rtm__electricity-buttons">
+                    <a href="../rtm-asic/asic.html" class="rtm__electricity-button rtm__electricity-button--left">
+                        <img src="../rtm-electricity/assets/button-arrow-left.svg" alt="arrow left">
+                    </a>
+                    <a href="../rtm-search/search.html" class="rtm__electricity-button rtm__electricity-button--right">
+                        <img src="../rtm-electricity/assets/button-arrow-right.svg" alt="arrow right">
+                    </a>
+                </div>
+            </div>
         </div>
-        <p class="rtm__main-electricity-subtitle">
-            please specify in USD
-        </p>
-    </div>
-    <div class="rtm__main-buttons">
-        <a href="../rtm-asic/asic.html" class="rtm__main-button rtm__main-button--left">
-            <img src="../rtm-electricity/assets/button-arrow-left.svg" alt="arrow left">
-        </a>
-        <a href="../rtm-search/search.html" class="rtm__main-button rtm__main-button--right">
-            <img src="../rtm-electricity/assets/button-arrow-right.svg" alt="arrow right">
-        </a>
     </div>
 </div>
-<footer class="rtm__main-footer">
-    <p class="rtm__main-footer-copyright">2022 - 2023 Ready To Mine. All about mining equipment</p>
+<footer class="rtm__electricity-footer">
+    <p class="rtm__electricity-footer-copyright">2022 - 2023 Ready To Mine. All about mining equipment</p>
 </footer>
 <script>
-    const menu = document.querySelector('#page-menu');
+    const menu = document.querySelector('#page-elec-menu');
     const menuBtn = document.querySelector('#menu-button');
     const menuCloseBtn = document.querySelector('#menu-close-btn');
 
     menuBtn.addEventListener('click', () => {
-        menu.classList.add('page__menu--active')
+        menu.classList.add('page-elec__menu--active')
         document.body.classList.add('menu-active')
     });
     menuCloseBtn.addEventListener('click', () => {
-        menu.classList.remove('page__menu--active')
+        menu.classList.remove('page-elec__menu--active')
         document.body.classList.remove('menu-active')
     });
 </script>

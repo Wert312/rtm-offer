@@ -254,6 +254,7 @@ body {
 
     &-language {
       &-selector {
+        display: inline-block;
         position: relative;
         cursor: pointer;
         &:hover {
@@ -485,6 +486,7 @@ body {
 
     &-footer {
       width: 100%;
+      align-self: flex-end;
       margin-top: auto;
       padding-bottom: 22px;
 

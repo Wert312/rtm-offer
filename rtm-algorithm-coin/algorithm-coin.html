@@ -8,44 +8,44 @@
     <link rel="stylesheet" href="../rtm-algorithm-coin/styles/algorithm-coin.css">
     <title>RTM Offer</title>
 </head>
-<body>
-<div id="page-menu" class="page__menu">
-    <div class="page__menu-content">
-        <div id="menu-close-btn" class="page__menu-content-close-btn-wrapper">
-            <div class="page__menu-content-close-btn-image">
+<body class="body-algorithm">
+<div id="page-algo-menu" class="page-algo__menu">
+    <div class="page-algo__menu-content">
+        <div id="menu-close-btn" class="page-algo__menu-content-close-btn-wrapper">
+            <div class="page-algo__menu-content-close-btn-image">
                 <svg width="22" height="22" viewBox="0 0 22 22" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 0.646484L20.799 20.4455" stroke="currentColor" stroke-linecap="round"/>
                     <path d="M1 21.1523L20.799 1.35335" stroke="currentColor" stroke-linecap="round"/>
                 </svg>
             </div>
         </div>
-        <ul class="page__menu-content-list">
-            <li class="page__menu-content-list-item">
+        <div class="page-algo__menu-content-list">
+            <a href="" class="page-algo__menu-content-list-item">
                 Price list
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="26" viewBox="0 0 15 26" fill="none">
                     <path d="M2.62402 2.5L13.124 13L2.62402 23.5" stroke="#777777" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-            </li>
-            <li class="page__menu-content-list-item">
+            </a>
+            <a href="" class="page-algo__menu-content-list-item">
                 Bonus programme
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="26" viewBox="0 0 15 26" fill="none">
                     <path d="M2.62402 2.5L13.124 13L2.62402 23.5" stroke="#777777" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-            </li>
-            <li class="page__menu-content-list-item">
+            </a>
+            <a href="" class="page-algo__menu-content-list-item">
                 Contacts
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="26" viewBox="0 0 15 26" fill="none">
                     <path d="M2.62402 2.5L13.124 13L2.62402 23.5" stroke="#777777" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-            </li>
-        </ul>
+            </a>
+        </div>
     </div>
 </div>
-<div class="page__container">
-    <header class="rtm__main-header">
-        <nav class="rtm__main-navbar">
-            <div class="rtm__main-menu-wrapper">
-                <div id="menu-button" class="rtm__main-menu-mobile">
+<div class="page-algo__container">
+    <header class="rtm__algorithm-coin-header">
+        <nav class="rtm__algorithm-coin-navbar">
+            <div class="rtm__algorithm-coin-menu-wrapper">
+                <div id="menu-button" class="rtm__algorithm-coin-menu-mobile">
                     <svg width="29" height="12" viewBox="0 0 29 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 1H27.6667" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round"/>
                         <path d="M1 6H27.6667" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round"/>
@@ -53,86 +53,92 @@
                     </svg>
                     Menu
                 </div>
-                <p class="rtm__main-menu-logo">ReadyToMine</p>
-                <div class="rtm__main-menu-language-selector-wrapper">
-                    <div class="rtm__main-menu-language-selector rtm__main-menu-language-selector--active">En</div>
-                    <div class="rtm__main-menu-language-selector">Ru</div>
+                <a href="" class="rtm__algorithm-coin-menu-logo">ReadyToMine</a>
+                <div class="rtm__algorithm-coin-menu-language-selector-wrapper">
+                    <a href="" class="rtm__algorithm-coin-menu-language-selector rtm__algorithm-coin-menu-language-selector--active">En</a>
+                    <a href="" class="rtm__algorithm-coin-menu-language-selector">Ru</a>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="rtm__main-content-wrapper">
-        <div class="rtm__main-progress-wrapper">
-            <p class="rtm__main-progress-title">0% complete</p>
-            <progress max="100" value="0" class="rtm__main-progress-bar"></progress>
-        </div>
-        <div class="rtm__main-algorithms-wrapper">
-            <p class="rtm__main-algorithms-title">Choose an algorithm and a coin</p>
-            <div class="rtm__main-algorithms-content">
-                <div class="rtm__main-algorithms-item">
-                    <p class="rtm__main-algorithms-item-title">SHA-256</p>
-                    <p class="rtm__main-algorithms-item-text">Bitcoin, Bitcoin Cash, Bitcoin SV</p>
+    <div class="container">
+        <div class="slider js-slider">
+            <div class="slide slide-1 active">
+                <div class="rtm__algorithm-coin-content-wrapper">
+                    <div class="rtm__algorithm-coin-progress-wrapper">
+                        <p class="rtm__algorithm-coin-progress-title">0% complete</p>
+                        <progress max="100" value="0" class="rtm__algorithm-coin-progress-bar"></progress>
+                    </div>
+                    <div class="rtm__algorithm-coin-algorithms-wrapper">
+                        <p class="rtm__algorithm-coin-algorithms-title">Choose an algorithm and a coin</p>
+                        <div class="rtm__algorithm-coin-algorithms-content">
+                            <div class="rtm__algorithm-coin-algorithms-item">
+                                <p class="rtm__algorithm-coin-algorithms-item-title">SHA-256</p>
+                                <p class="rtm__algorithm-coin-algorithms-item-text">Bitcoin, Bitcoin Cash, Bitcoin SV</p>
+                            </div>
+                            <div class="rtm__algorithm-coin-algorithms-item rtm__algorithm-coin-algorithms-item--disabled">
+                                <p class="rtm__algorithm-coin-algorithms-item-title">Sсrypt</p>
+                                <p class="rtm__algorithm-coin-algorithms-item-text">Litecoin + DOGE</p>
+                            </div>
+                            <div class="rtm__algorithm-coin-algorithms-item rtm__algorithm-coin-algorithms-item--disabled">
+                                <p class="rtm__algorithm-coin-algorithms-item-title">Ethash</p>
+                                <p class="rtm__algorithm-coin-algorithms-item-text">Ethereum Classic</p>
+                            </div>
+                            <div class="rtm__algorithm-coin-algorithms-item rtm__algorithm-coin-algorithms-item--disabled">
+                                <p class="rtm__algorithm-coin-algorithms-item-title">Equihash</p>
+                                <p class="rtm__algorithm-coin-algorithms-item-text">Zcash, Horizen</p>
+                            </div>
+                            <div class="rtm__algorithm-coin-algorithms-item rtm__algorithm-coin-algorithms-item--disabled">
+                                <p class="rtm__algorithm-coin-algorithms-item-title">X11</p>
+                                <p class="rtm__algorithm-coin-algorithms-item-text">Dash</p>
+                            </div>
+                            <div class="rtm__algorithm-coin-algorithms-item rtm__algorithm-coin-algorithms-item--disabled">
+                                <p class="rtm__algorithm-coin-algorithms-item-title">Blake2S</p>
+                                <p class="rtm__algorithm-coin-algorithms-item-text">KDA</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="rtm__main-algorithms-item rtm__main-algorithms-item--disabled">
-                    <p class="rtm__main-algorithms-item-title">Sсrypt</p>
-                    <p class="rtm__main-algorithms-item-text">Litecoin + DOGE</p>
+                <div class="rtm__algorithm-coin-coins-wrapper">
+                    <p class="rtm__algorithm-coin-coins-title">coin</p>
+                    <div class="rtm__algorithm-coin-coins-content">
+                        <div class="rtm__algorithm-coin-coins-item">
+                            <p class="rtm__algorithm-coin-coins-item-text">Bitcoin SV</p>
+                        </div>
+                        <div class="rtm__algorithm-coin-coins-item">
+                            <p class="rtm__algorithm-coin-coins-item-text">Bitcoin</p>
+                        </div>
+                        <div class="rtm__algorithm-coin-coins-item">
+                            <p class="rtm__algorithm-coin-coins-item-text">Bitcoin Cash</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="rtm__main-algorithms-item rtm__main-algorithms-item--disabled">
-                    <p class="rtm__main-algorithms-item-title">Ethash</p>
-                    <p class="rtm__main-algorithms-item-text">Ethereum Classic</p>
-                </div>
-                <div class="rtm__main-algorithms-item rtm__main-algorithms-item--disabled">
-                    <p class="rtm__main-algorithms-item-title">Equihash</p>
-                    <p class="rtm__main-algorithms-item-text">Zcash, Horizen</p>
-                </div>
-                <div class="rtm__main-algorithms-item rtm__main-algorithms-item--disabled">
-                    <p class="rtm__main-algorithms-item-title">X11</p>
-                    <p class="rtm__main-algorithms-item-text">Dash</p>
-                </div>
-                <div class="rtm__main-algorithms-item rtm__main-algorithms-item--disabled">
-                    <p class="rtm__main-algorithms-item-title">Blake2S</p>
-                    <p class="rtm__main-algorithms-item-text">KDA</p>
+                <div class="rtm__algorithm-coin-buttons">
+                    <a href="../index.html" class="rtm__algorithm-coin-button rtm__algorithm-coin-button--left">
+                        <img src="../rtm-algorithm-coin/assets/button-arrow-left.svg" alt="arrow left">
+                    </a>
+                    <a href="../rtm-asic/asic.html" class="rtm__algorithm-coin-button rtm__algorithm-coin-button--right">
+                        <img src="../rtm-algorithm-coin/assets/button-arrow-right.svg" alt="arrow right">
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="rtm__main-coins-wrapper">
-        <p class="rtm__main-coins-title">coin</p>
-        <div class="rtm__main-coins-content">
-            <div class="rtm__main-coins-item">
-                <p class="rtm__main-coins-item-text">Bitcoin SV</p>
-            </div>
-            <div class="rtm__main-coins-item">
-                <p class="rtm__main-coins-item-text">Bitcoin</p>
-            </div>
-            <div class="rtm__main-coins-item">
-                <p class="rtm__main-coins-item-text">Bitcoin Cash</p>
-            </div>
-        </div>
-    </div>
-    <div class="rtm__main-buttons">
-        <a href="../index.html" class="rtm__main-button rtm__main-button--left">
-            <img src="../rtm-algorithm-coin/assets/button-arrow-left.svg" alt="arrow left">
-        </a>
-        <a href="../rtm-asic/asic.html" class="rtm__main-button rtm__main-button--right">
-            <img src="../rtm-algorithm-coin/assets/button-arrow-right.svg" alt="arrow right">
-        </a>
     </div>
 </div>
-<footer class="rtm__main-footer">
-    <p class="rtm__main-footer-copyright">2022 - 2023 Ready To Mine. All about mining equipment</p>
+<footer class="rtm__algorithm-coin-footer">
+    <p class="rtm__algorithm-coin-footer-copyright">2022 - 2023 Ready To Mine. All about mining equipment</p>
 </footer>
 <script>
-    const menu = document.querySelector('#page-menu');
+    const menu = document.querySelector('#page-algo-menu');
     const menuBtn = document.querySelector('#menu-button');
     const menuCloseBtn = document.querySelector('#menu-close-btn');
 
     menuBtn.addEventListener('click', () => {
-        menu.classList.add('page__menu--active')
+        menu.classList.add('page-algo__menu--active')
         document.body.classList.add('menu-active')
     });
     menuCloseBtn.addEventListener('click', () => {
-        menu.classList.remove('page__menu--active')
+        menu.classList.remove('page-algo__menu--active')
         document.body.classList.remove('menu-active')
     });
 </script>

@@ -491,8 +491,9 @@ body a:visited {
   }
 }
 .rtm__search-footer {
-  width: 100%;
   margin-top: auto;
+  width: 100%;
+  align-self: flex-end;
   padding-bottom: 22px;
 }
 @media (min-width: 768px) {
