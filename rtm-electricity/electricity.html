@@ -5,34 +5,35 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../rtm-electricity/styles/normalize.css">
     <link rel="stylesheet" href="../rtm-electricity/styles/electricity.css">
     <title>RTM Offer</title>
 </head>
-<body class="body-electricity">
-<div id="page-elec-menu" class="page-elec__menu">
-    <div class="page-elec__menu-content">
-        <div id="menu-close-btn" class="page-elec__menu-content-close-btn-wrapper">
-            <div class="page-elec__menu-content-close-btn-image">
+<body class="body-main">
+<div id="main-menu" class="main__menu">
+    <div class="main__menu-content">
+        <div id="menu-close-btn" class="main__menu-content-close-btn-wrapper">
+            <div class="main__menu-content-close-btn-image">
                 <svg width="22" height="22" viewBox="0 0 22 22" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 0.646484L20.799 20.4455" stroke="currentColor" stroke-linecap="round"/>
                     <path d="M1 21.1523L20.799 1.35335" stroke="currentColor" stroke-linecap="round"/>
                 </svg>
             </div>
         </div>
-        <div class="page-elec__menu-content-list">
-            <a href="" class="page-elec__menu-content-list-item">
+        <div class="main__menu-content-list">
+            <a href="" class="main__menu-content-list-item">
                 Price list
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="26" viewBox="0 0 15 26" fill="none">
                     <path d="M2.62402 2.5L13.124 13L2.62402 23.5" stroke="#777777" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </a>
-            <a href="" class="page-elec__menu-content-list-item">
+            <a href="" class="main__menu-content-list-item">
                 Bonus programme
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="26" viewBox="0 0 15 26" fill="none">
                     <path d="M2.62402 2.5L13.124 13L2.62402 23.5" stroke="#777777" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </a>
-            <a href="" class="page-elec__menu-content-list-item">
+            <a href="" class="main__menu-content-list-item">
                 Contacts
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="26" viewBox="0 0 15 26" fill="none">
                     <path d="M2.62402 2.5L13.124 13L2.62402 23.5" stroke="#777777" stroke-linecap="round" stroke-linejoin="round"/>
@@ -41,7 +42,7 @@
         </div>
     </div>
 </div>
-<div class="page-elec__container">
+<div class="main__container">
     <header class="rtm__electricity-header">
         <nav class="rtm__electricity-navbar">
             <div class="rtm__electricity-menu-wrapper">
@@ -105,16 +106,16 @@
     <p class="rtm__electricity-footer-copyright">2022 - 2023 Ready To Mine. All about mining equipment</p>
 </footer>
 <script>
-    const menu = document.querySelector('#page-elec-menu');
+    const menu = document.querySelector('#main-menu');
     const menuBtn = document.querySelector('#menu-button');
     const menuCloseBtn = document.querySelector('#menu-close-btn');
 
     menuBtn.addEventListener('click', () => {
-        menu.classList.add('page-elec__menu--active')
+        menu.classList.add('main__menu--active')
         document.body.classList.add('menu-active')
     });
     menuCloseBtn.addEventListener('click', () => {
-        menu.classList.remove('page-elec__menu--active')
+        menu.classList.remove('main__menu--active')
         document.body.classList.remove('menu-active')
     });
 </script>

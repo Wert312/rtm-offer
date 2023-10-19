@@ -1,5 +1,4 @@
 @import "../../../rtm-offer/fonts/fonts.css";
-@import "normalize.css";
 * {
   box-sizing: border-box;
 }
@@ -165,10 +164,12 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
+  margin-bottom: 50px;
 }
 @media (min-width: 768px) {
   .main__container {
     padding: 0 36px 0;
+    margin-bottom: 35px;
   }
 }
 @media (min-width: 992px) {
@@ -180,7 +181,7 @@ body {
   .main__container {
     padding: 0 12px 0;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 63px;
   }
 }
 @media (min-width: 1440px) {
@@ -501,22 +502,22 @@ body {
 @media (min-width: 768px) {
   .rtm__main-footer {
     display: block;
-    padding-bottom: 16px;
+    padding-bottom: 30px;
   }
 }
 @media (min-width: 992px) {
   .rtm__main-footer {
-    padding-bottom: 39px;
+    padding-bottom: 28px;
   }
 }
 @media (min-width: 1200px) {
   .rtm__main-footer {
-    padding-bottom: 25px;
+    padding-bottom: 33px;
   }
 }
 @media (min-width: 1440px) {
   .rtm__main-footer {
-    padding-bottom: 72px;
+    padding-bottom: 28px;
   }
 }
 .rtm__main-footer-copyright {

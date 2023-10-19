@@ -1,5 +1,4 @@
 @import "../../../rtm-offer/fonts/fonts.css";
-@import "normalize.css";
 * {
   box-sizing: border-box;
 }
@@ -16,9 +15,8 @@ html, body {
   font-family: "Roboto", sans-serif;
 }
 
-.body-algorithm {
+.body-main {
   background: #EBFAFF;
-  display: grid;
 }
 
 body {
@@ -180,7 +178,7 @@ body a:visited {
   .page-algo__container {
     padding: 0 12px 0;
     max-width: 1200px;
-    margin: 0 auto 50px;
+    margin: 0 auto 63px;
   }
 }
 @media (min-width: 1440px) {

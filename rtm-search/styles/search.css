@@ -1,5 +1,4 @@
 @import "../../../rtm-offer/fonts/search-fonts.css";
-@import "normalize.css";
 * {
   box-sizing: border-box;
 }
@@ -16,11 +15,11 @@ html, body {
   max-width: 1200px !important;
 }
 
-body {
+.body-main {
   background: #EBFAFF;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
+}
+
+body {
   position: relative;
 }
 body a {
@@ -160,7 +159,9 @@ body a:visited {
   padding: 0 12px 0;
   width: 100%;
   height: 100%;
-  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
 }
 @media (min-width: 768px) {
   .page__container {

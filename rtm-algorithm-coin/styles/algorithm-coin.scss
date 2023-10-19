@@ -1,6 +1,5 @@
 @import "../../../rtm-offer/fonts/fonts.css";
 @import "mixins";
-@import "normalize.css";
 
 * {
   box-sizing: border-box;
@@ -18,9 +17,8 @@ html, body {
   font-family: "Roboto", sans-serif;
 }
 
-.body-algorithm {
+.body-main {
   background: #EBFAFF;
-  display: grid;
 }
 
 body {
@@ -173,7 +171,6 @@ body {
       margin-bottom: 35px;
     }
 
-
     @include for-desktop {
       padding: 0 28px 0;
     }
@@ -181,7 +178,7 @@ body {
     @include for-desktop-large {
       padding: 0 12px 0;
       max-width: 1200px;
-      margin: 0 auto 50px;
+      margin: 0 auto 63px;
     }
 
     @include for-desktop-xl {
