@@ -7,10 +7,6 @@
   max-width: 1200px !important;
 }
 
-.html-main {
-  height: 100%;
-}
-
 html, body {
   width: 100%;
   min-height: 100vh;
