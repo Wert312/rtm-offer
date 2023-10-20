@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../rtm-offer-page/styles/normalize.css">
     <link rel="stylesheet" href="../rtm-offer-page/styles/offer.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script type="module" src="scripts/donut.js"></script>
     <title>RTM Offer</title>
 </head>
 <body class="body-offer">
@@ -71,15 +73,120 @@
                     </h1>
                     <div class="rtm__offer-blocks-wrapper">
                         <div class="rtm__offer-blocks-group">
-                            <div class="rtm__offer-blocks-item rtm__offer-blocks-item--features"></div>
-                            <div class="rtm__offer-blocks-item rtm__offer-blocks-item--price"></div>
+                            <div class="rtm__offer-blocks-item rtm__offer-blocks-item--features">
+                                <div class="rtm__offer-blocks-feature-group">
+                                    <div class="rtm__offer-blocks-feature">
+                                        <p class="rtm__offer-blocks-feature-title">hashrate</p>
+                                        <p class="rtm__offer-blocks-feature-text">75 TH/s</p>
+                                    </div>
+                                    <div class="rtm__offer-blocks-feature">
+                                        <p class="rtm__offer-blocks-feature-title">algorithm</p>
+                                        <p class="rtm__offer-blocks-feature-text">SHA-256</p>
+                                    </div>
+                                </div>
+                                <div class="rtm__offer-blocks-feature-group">
+                                    <div class="rtm__offer-blocks-feature">
+                                        <p class="rtm__offer-blocks-feature-title">power consumption</p>
+                                        <p class="rtm__offer-blocks-feature-text">3 300 W</p>
+                                    </div>
+                                    <div class="rtm__offer-blocks-feature">
+                                        <p class="rtm__offer-blocks-feature-title">weight</p>
+                                        <p class="rtm__offer-blocks-feature-text">10.8 Kg</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rtm__offer-blocks-item rtm__offer-blocks-item--price">
+                                <p class="rtm__offer-blocks-price-title">price per unit</p>
+                                <p class="rtm__offer-blocks-price-text"><span class="rtm__offer-blocks-price-text rtm__offer-blocks-price-text--bold">2 400</span> USDT</p>
+                            </div>
                         </div>
-                        <div class="rtm__offer-blocks-group">
-                            <div class="rtm__offer-blocks-item rtm__offer-blocks-item--roi"></div>
-                            <div class="rtm__offer-blocks-item rtm__offer-blocks-item--diagram"></div>
+                        <div class="rtm__offer-blocks-group rtm__offer-blocks-group--expanded">
+                            <div class="rtm__offer-blocks-item rtm__offer-blocks-item--roi">
+                                <p class="rtm__offer-blocks-roi-title">Return on investment on ZEC coin (Zcash)*</p>
+                                <div class="rtm__offer-blocks-roi-table-wrapper">
+                                    <div class="rtm__offer-blocks-roi-table-row rtm__offer-blocks-roi-table-row--header">
+                                        <div class="rtm__offer-blocks-roi-table-row-item"></div>
+                                        <div class="rtm__offer-blocks-roi-table-row-item rtm__offer-blocks-roi-table-row-item--header">per <span class="rtm__offer-blocks-roi-table-row-item-text--bold">day</span></div>
+                                        <div class="rtm__offer-blocks-roi-table-row-item rtm__offer-blocks-roi-table-row-item--header">per <span class="rtm__offer-blocks-roi-table-row-item-text--bold">month</span></div>
+                                        <div class="rtm__offer-blocks-roi-table-row-item rtm__offer-blocks-roi-table-row-item--header">per <span class="rtm__offer-blocks-roi-table-row-item-text--bold">year</span></div>
+                                    </div>
+                                    <div class="rtm__offer-blocks-roi-table-row">
+                                        <div class="rtm__offer-blocks-roi-table-row-item">revenue</div>
+                                        <div class="rtm__offer-blocks-roi-table-row-item">$5.12</div>
+                                        <div class="rtm__offer-blocks-roi-table-row-item">$154</div>
+                                        <div class="rtm__offer-blocks-roi-table-row-item">$1848</div>
+                                    </div>
+                                    <div class="rtm__offer-blocks-roi-table-row rtm__offer-blocks-roi-table-row--centered">
+                                        <div class="rtm__offer-blocks-roi-table-row-item">costs</div>
+                                        <div class="rtm__offer-blocks-roi-table-row-item">-$3.624</div>
+                                        <div class="rtm__offer-blocks-roi-table-row-item">-$108.72</div>
+                                        <div class="rtm__offer-blocks-roi-table-row-item">-$ 1322.76</div>
+                                    </div>
+                                    <div class="rtm__offer-blocks-roi-table-row rtm__offer-blocks-roi-table-row--end">
+                                        <div class="rtm__offer-blocks-roi-table-row-item">income</div>
+                                        <div class="rtm__offer-blocks-roi-table-row-item">$ 1.49</div>
+                                        <div class="rtm__offer-blocks-roi-table-row-item">$ 44.83</div>
+                                        <div class="rtm__offer-blocks-roi-table-row-item">$ 545.47</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rtm__offer-blocks-item rtm__offer-blocks-item--diagram">
+                                <div id="doughnutChart">
+                                    <div class="myChartDiv">
+                                        <canvas id="myChart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="rtm__offer-blocks-item rtm__offer-blocks-item--payback"></div>
-                        <div class="rtm__offer-blocks-item rtm__offer-blocks-item--form"></div>
+                        <div class="rtm__offer-blocks-item rtm__offer-blocks-item--payback">
+                            <p class="rtm__offer-blocks-payback-title">Calculation of the payback period of the investment</p>
+                            <div class="rtm__offer-blocks-payback-subgroup">
+                                <p class="rtm__offer-blocks-payback-calculation">3050 $   /   121.78 $   =   12.5 months</p>
+                                <p class="rtm__offer-blocks-payback-period">12.5 months</p>
+                            </div>
+                        </div>
+                        <div class="rtm__offer-blocks-item rtm__offer-blocks-item--form">
+                            <p class="rtm__offer-blocks-form-title">Your choice</p>
+                            <div class="rtm__offer-blocks-form-content">
+                                <div class="rtm__offer-blocks-form-cost">
+                                    <p class="rtm__offer-blocks-form-cost-title">total cost</p>
+                                    <p class="rtm__offer-blocks-form-cost-value"><span class="rtm__offer-blocks-form-cost-value-bold">48 000</span> USDT</p>
+                                </div>
+                                <div class="rtm__offer-blocks-form-data-wrapper">
+                                    <div class="rtm__offer-blocks-form-data-item rtm__offer-blocks-form-data-item--model">
+                                        <p class="rtm__offer-blocks-form-data-item-title">unit model</p>
+                                        <p class="rtm__offer-blocks-form-data-item-value">Bitmain
+                                            Antminer S19j Pro</p>
+                                    </div>
+                                    <div class="rtm__offer-blocks-form-data-item rtm__offer-blocks-form-data-item--quantity">
+                                        <p class="rtm__offer-blocks-form-data-item-title">quantity</p>
+                                        <p class="rtm__offer-blocks-form-data-item-value">20 pcs</p>
+                                    </div>
+                                    <div class="rtm__offer-blocks-form-data-item rtm__offer-blocks-form-data-item--coin">
+                                        <p class="rtm__offer-blocks-form-data-item-title">coin</p>
+                                        <p class="rtm__offer-blocks-form-data-item-value">Bitcoin</p>
+                                    </div>
+                                    <div class="rtm__offer-blocks-form-data-item rtm__offer-blocks-form-data-item--price">
+                                        <p class="rtm__offer-blocks-form-data-item-title">price per unit</p>
+                                        <p class="rtm__offer-blocks-form-data-item-value">2 400 USDT</p>
+                                    </div>
+                                    <div class="rtm__offer-blocks-form-data-item rtm__offer-blocks-form-data-item--algorithm">
+                                        <p class="rtm__offer-blocks-form-data-item-title">algorithm</p>
+                                        <p class="rtm__offer-blocks-form-data-item-value">SHA-256</p>
+                                    </div>
+                                    <div class="rtm__offer-blocks-form-data-item rtm__offer-blocks-form-data-item--charge">
+                                        <p class="rtm__offer-blocks-form-data-item-title">electricity charge</p>
+                                        <p class="rtm__offer-blocks-form-data-item-value">2.2 USD</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <form action="" autocomplete="on" class="rtm__offer-blocks-form-fields-wrapper">
+                                <input placeholder="First name" type="text" class="rtm__offer-blocks-form-fields-item">
+                                <input placeholder="E-mail" type="email" class="rtm__offer-blocks-form-fields-item rtm__offer-blocks-form-fields-item--email">
+                                <input placeholder="Last name" type="text" class="rtm__offer-blocks-form-fields-item rtm__offer-blocks-form-fields-item--last-name">
+                                <button class="rtm__offer-blocks-form-fields-btn" type="submit"><span class="rtm__offer-blocks-form-fields-btn-text">Send</span></button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -101,6 +208,44 @@
     menuCloseBtn.addEventListener('click', () => {
         menu.classList.remove('page-offer__menu--active')
         document.body.classList.remove('menu-active')
+    });
+
+
+    Chart.pluginService.register({
+
+        afterUpdate: function(chart) {
+            if (chart.config.options.elements.arc.roundedCornersFor !== undefined) {
+                var arc = chart.getDatasetMeta(0).data[chart.config.options.elements.arc.roundedCornersFor];
+                arc.round = {
+                    x: (chart.chartArea.left + chart.chartArea.right) / 2,
+                    y: (chart.chartArea.top + chart.chartArea.bottom) / 2,
+                    radius: (chart.outerRadius + chart.innerRadius) / 2,
+                    thickness: (chart.outerRadius - chart.innerRadius) / 2,
+                    backgroundColor: "#53A5ED",
+                }
+            }
+        },
+
+        afterDatasetsDraw: function(chart) {
+            if (chart.config.options.elements.arc.roundedCornersFor !== undefined) {
+                var ctx = chart.chart.ctx;
+                var arc = chart.getDatasetMeta(0).data[chart.config.options.elements.arc.roundedCornersFor];
+                var startAngle = Math.PI / 2 - arc._view.startAngle;
+                var endAngle = Math.PI / 2 - arc._view.endAngle;
+
+                ctx.save();
+                ctx.translate(arc.round.x, arc.round.y);
+                ctx.fillStyle = arc.round.backgroundColor;
+                ctx.beginPath();
+                if (chart.config.data.datasets[0].data[0] !== 0) {
+                    ctx.arc(arc.round.radius * Math.sin(endAngle), arc.round.radius * Math.cos(endAngle), arc.round.thickness, 0, 2 * Math.PI);
+                }
+                ctx.fillStyle = "#53A5ED";
+                ctx.closePath();
+                ctx.fill();
+                ctx.restore();
+            }
+        },
     });
 </script>
 </body>
