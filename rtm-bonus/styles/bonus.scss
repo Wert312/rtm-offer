@@ -1,0 +1,686 @@
+@import "../../../rtm-offer/fonts/search-fonts.css";
+@import "mixins";
+
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  max-width: 1200px !important;
+}
+
+.body-main {
+  background: #EBFAFF;
+}
+
+body {
+  position: relative;
+
+  a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    &:visited {
+      color: inherit;
+    }
+  }
+}
+
+.menu-active {
+  overflow-y: hidden;
+  height: 100%;
+  &::after {
+    z-index: 1000;
+    top: 0;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background: linear-gradient(132deg, rgba(0, 201, 214, .3) 28.5%, rgba(73, 50, 217, .3) 98.72%);
+    backdrop-filter: blur(35px);
+    background-size: cover;
+  }
+}
+
+.main {
+  &__menu {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: white;
+    z-index: 10000;
+    display: none;
+    font-family: "Roboto", sans-serif;
+
+    @include for-tablet {
+      max-width: 408px;
+    }
+
+    @include for-desktop {
+      max-width: 450px;
+    }
+
+    @include for-desktop-large {
+      max-width: 498px;
+    }
+
+    &--active {
+      display: block;
+
+      @include for-tablet {
+        position: fixed;
+      }
+    }
+
+    &-content {
+      height: 100%;
+      width: 100%;
+      padding: 32px 20px 0;
+      display: flex;
+      flex-direction: column;
+      @include for-tablet {
+        padding: 0;
+        position: relative;
+      }
+
+      &-close-btn {
+        &-wrapper {
+          display: flex;
+          width: auto;
+          height: auto;
+          margin-left: auto;
+          color: #777777;
+
+          @include for-tablet {
+            position: absolute;
+            right: -52px;
+            top: 16px;
+            height: 40px;
+            width: 40px;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            border-radius: 6px;
+            color: black;
+            cursor: pointer;
+          }
+        }
+
+        &-image {
+          display: flex;
+        }
+      }
+
+      &-list {
+        padding: 0;
+        list-style: none;
+        margin-top: 46px;
+        margin-bottom: 0;
+
+        @include for-tablet {
+          padding: 60px 48px 0 60px;
+          margin-top: 0;
+        }
+
+        @include for-desktop-large {
+          padding: 130px 60px 0;
+        }
+
+        &-item {
+          height: 48px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          font-size: 18px;
+          font-weight: 400;
+          cursor: pointer;
+
+          @include for-tablet {
+            height: 64px;
+            font-size: 24px;
+            padding: 0 11px;
+
+            &:hover {
+              border-radius: 8px;
+              background: #ECECEC;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+
+    @include for-tablet {
+      margin-bottom: 84px;
+    }
+
+    @include for-desktop {
+      margin-bottom: 97px;
+    }
+
+    @include for-desktop-large {
+      margin-bottom: 50px;
+    }
+
+    @include for-desktop-xl {
+      margin-bottom: 136px;
+    }
+  }
+  &__footer {
+    margin-top: auto;
+    width: 100%;
+    align-self: flex-end;
+    padding-bottom: 22px;
+
+    @include for-tablet {
+      padding-bottom: 21px;
+    }
+
+    @include for-desktop {
+      padding-bottom: 28px;
+    }
+
+    @include for-desktop-large {
+      padding-bottom: 33px;
+    }
+
+    @include for-desktop-xl {
+      padding-bottom: 28px;
+    }
+
+    &-copyright {
+      margin: 0;
+      font-size: 10px;
+      font-weight: 500;
+      text-align: center;
+    }
+  }
+}
+
+.rtm {
+  &__bonus-menu {
+    &-navbar {
+      padding: 0 12px 27px;
+
+      @include for-tablet {
+        padding: 0 33px 31px;
+      }
+
+      @include for-desktop {
+        padding: 0 30px 31px;
+      }
+
+      @include for-desktop-large {
+        padding: 0 12px 26px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+    }
+
+    &-header {
+      background: linear-gradient(207deg, #D1FCFF 109.61%, #AFCFFF 36.27%);
+    }
+
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #000000;
+      font-size: 18px;
+      font-weight: 500;
+
+      @include for-tablet {
+        padding: 0;
+        font-size: 20px;
+      }
+    }
+
+    &-mobile {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      &:hover {
+        color: rgba(124, 124, 124, 1);
+      }
+
+      &:active {
+        color: rgba(188, 188, 188, 1);
+      }
+
+      @include for-tablet {
+        gap: 8px;
+        padding-top: 41px;
+        padding-bottom: 27px;
+      }
+
+      @include for-desktop {
+        padding-top: 38px;
+        padding-bottom: 30px;
+        cursor: pointer;
+      }
+
+      @include for-desktop-large {
+        padding-top: 41px;
+        padding-bottom: 32px;
+      }
+    }
+
+    &-logo {
+      margin: 0;
+      color: #000000;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      &:hover {
+        color: rgba(124, 124, 124, 1);
+      }
+
+      &:active {
+        color: rgba(188, 188, 188, 1);
+      }
+
+      @include for-tablet {
+        font-size: 20px;
+        padding-top: 38px;
+        padding-bottom: 30px;
+      }
+
+      @include for-desktop-large {
+        padding-bottom: 35px;
+      }
+    }
+
+    &-language {
+      &-selector {
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+        &:hover {
+          color: rgba(124, 124, 124, 1);
+        }
+
+        &:first-of-type {
+          &::after {
+            content: '';
+            position: absolute;
+            height: 24px;
+            width: 2px;
+            left: 29px;
+            background: black;
+
+            @include for-desktop-large {
+              left: 29px;
+            }
+          }
+        }
+
+        &-wrapper {
+          display: none;
+
+          @include for-tablet {
+            display: flex;
+            gap: 15px;
+            padding-top: 38px;
+            padding-bottom: 25px;
+          }
+
+          @include for-desktop {
+            padding-top: 36px;
+            padding-bottom: 27px;
+          }
+
+          @include for-desktop-large {
+            padding-top: 41px;
+            padding-bottom: 32px;
+          }
+        }
+
+        &--active {
+          background: linear-gradient(90deg, #B276FF 0%, #FEAB00 97.75%);
+          background-clip: text;
+          -webkit-box-decoration-break: clone;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+  }
+
+  &__bonus {
+    &-content-wrapper {
+      margin-bottom: 5px;
+
+      @include for-tablet {
+        margin-bottom: 0;
+      }
+    }
+
+    &-header {
+      width: 100%;
+      height: fit-content;
+      padding: 0 12px 0;
+
+      @include for-tablet {
+        padding: 0 33px 0;
+      }
+
+      @include for-desktop-large {
+        padding: 0;
+        margin: 0 auto;
+        max-width: 1200px;
+      }
+
+      &-wrapper {
+        position: relative;
+        background: linear-gradient(178deg, rgba(209, 252, 255, 1) 0%, rgba(206, 247, 255, 1) 10%, rgba(175, 207, 255, 1) 61%, rgba(176, 208, 255, 1) 73%, rgba(176, 204, 255, 1) 76%, rgba(188, 189, 255, 1) 83%, rgba(189, 188, 255, 1) 85%, rgba(188, 188, 255, 0.97) 86%, rgba(188, 187, 255, 0.93) 87%, rgba(188, 186, 255, 0.84) 88%, rgba(187, 185, 255, 0.69) 89%, rgba(189, 187, 255, 0.58) 90%, rgba(186, 186, 255, 0.37) 92%, rgba(191, 185, 255, 0.26) 93%, rgba(188, 188, 255, 0.15) 94%, rgba(191, 191, 255, 0.08) 95%, rgba(170, 170, 255, 0.02) 96%, rgba(255, 255, 255, 0) 97%, rgba(0, 0, 0, 0) 98%, rgba(0, 0, 0, 0) 100%), #EBFAFF;
+        background-size: contain;
+        padding-bottom: 79px;
+
+        @include for-tablet {
+          background-position: top;
+          padding-bottom: 186px;
+        }
+
+        @include for-desktop {
+          padding-bottom: 198px;
+        }
+
+        @include for-desktop-large {
+          padding-bottom: 224px;
+        }
+      }
+    }
+
+    &-title {
+      background: linear-gradient(90deg, #B276FF 0%, #FEAB00 97.75%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 43px;
+      font-weight: 700;
+      margin-bottom: 42px;
+      margin-top: 0;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        background: url("../../rtm-bonus/assets/card.svg");
+        width: 160px;
+        height: 150px;
+        top: 10px;
+        margin: auto;
+        left: 6px;
+        right: 0;
+
+        @include for-tablet {
+          width: 250px;
+          height: 236px;
+          top: 25px;
+          background-size: cover;
+          background-repeat: no-repeat;
+          margin: auto;
+          left: 10px;
+        }
+
+        @include for-desktop {
+          width: 351px;
+          height: 330px;
+          top: 35px;
+          background-size: cover;
+          background-repeat: no-repeat;
+          margin: auto;
+          left: 3px;
+        }
+
+        @include for-desktop-large {
+          width: 427px;
+          height: 402px;
+          top: 45px;
+          background-size: cover;
+          background-repeat: no-repeat;
+          margin: auto;
+          left: 0;
+        }
+      }
+
+      @include for-tablet {
+        font-size: 96px;
+        margin-bottom: 53px;
+        word-spacing: 15px;
+      }
+
+      @include for-desktop {
+        font-size: 131px;
+        margin-bottom: 75px;
+      }
+
+      @include for-desktop-large {
+        font-size: 160px;
+        margin-bottom: 91px;
+      }
+    }
+
+    &-subtitle {
+      color: #FFF;
+      text-align: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 38px;
+      font-weight: 700;
+      margin: 0;
+      position: relative;
+      z-index: 100;
+
+      @include for-tablet {
+        font-size: 76px;
+      }
+
+      @include for-desktop {
+        font-size: 106px;
+      }
+
+      @include for-desktop-large {
+        font-size: 130px;
+      }
+    }
+
+    &-tagline {
+      color: #FFF;
+      text-align: center;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      margin-top: 41px;
+      margin-bottom: 0;
+
+      @include for-tablet {
+        font-size: 16px;
+        margin-top: 64px;
+      }
+
+      @include for-desktop {
+        font-size: 20px;
+        margin-top: 73px;
+      }
+
+      @include for-desktop-large {
+        font-size: 24px;
+        margin-top: 89px;
+      }
+    }
+
+    &-system {
+      margin: 0 0 32px 0;
+
+      @include for-tablet {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        grid-column-gap: 24px;
+        margin: 0 0 25px 0;
+      }
+
+      @include for-desktop {
+        grid-column-gap: 122px;
+        margin: 0 0 37px 0;
+      }
+
+      @include for-desktop-large {
+        grid-column-gap: 83px;
+        margin: 0 0 111px 0;
+      }
+
+      &-wrapper {
+        position: relative;
+        padding: 0 12px 0;
+
+        @include for-tablet {
+          padding: 0 33px 0;
+        }
+
+        @include for-desktop-large {
+          padding: 0 12px 0;
+        }
+
+        @include for-desktop-xl {
+          padding: 0;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+      }
+
+      &-title {
+        margin: 0 auto 12px;
+        color: #000;
+        text-align: center;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 500;
+        width: 216px;
+
+        @include for-tablet {
+          text-align: left;
+          margin-bottom: 0;
+        }
+
+        @include for-desktop {
+          font-size: 36px;
+          width: 278px;
+        }
+
+        @include for-desktop-large {
+          font-size: 55px;
+          width: 423px;
+        }
+      }
+
+      &-subtitle {
+        color: #373737;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 300;
+        margin: 0;
+
+        @include for-tablet {
+          text-align: left;
+        }
+
+        @include for-desktop {
+          font-size: 14px;
+        }
+
+        @include for-desktop-large {
+          font-size: 18px;
+        }
+      }
+
+      &-features {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        @include for-tablet {
+          display: grid;
+          grid-template-columns: 250px 230px;
+          grid-column-gap: 94px;
+          grid-row-gap: 40px;
+        }
+
+        @include for-desktop {
+          grid-column-gap: 215px;
+          grid-row-gap: 52px;
+        }
+
+        @include for-desktop-large {
+          display: flex;
+          flex-direction: row;
+          gap: 52px;
+        }
+
+        &-item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          @include for-tablet {
+            align-items: flex-start;
+          }
+
+          @include for-desktop-large {
+            width: 245px;
+          }
+
+
+          &-image {
+            margin-bottom: 12px;
+          }
+
+          &-title {
+            margin: 0;
+            color: #000;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 500;
+
+            @include for-tablet {
+              text-align: left;
+            }
+          }
+
+          &-text {
+            margin-top: 12px;
+            margin-bottom: 0;
+            color: #373737;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 300;
+
+            @include for-tablet {
+              margin-top: 8px;
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+  }
+}
