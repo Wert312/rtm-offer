@@ -453,12 +453,13 @@ body a:visited {
 @media (min-width: 1200px) {
   .rtm__bonus-system-wrapper {
     padding: 0 12px 0;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 }
 @media (min-width: 1440px) {
   .rtm__bonus-system-wrapper {
     padding: 0;
-    max-width: 1200px;
     margin: 0 auto;
   }
 }

@@ -441,11 +441,12 @@ body {
 
         @include for-desktop-large {
           padding: 0 12px 0;
+          max-width: 1200px;
+          margin: 0 auto;
         }
 
         @include for-desktop-xl {
           padding: 0;
-          max-width: 1200px;
           margin: 0 auto;
         }
       }
