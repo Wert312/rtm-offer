@@ -21,7 +21,7 @@ const data = {
 
 // Configuration options for the donut chart
 const options = {
-    cutout: 65, // Adjust to control the size of the hole in the donut
+    cutout: 70, // Adjust to control the size of the hole in the donut
     plugins: {
         legend: {
             display: false,
