@@ -1059,11 +1059,6 @@ body a:visited {
     width: 275px;
   }
 }
-@media (min-width: 992px) {
-  .rtm__offer-blocks-form-fields-item--email {
-    order: 1;
-  }
-}
 .rtm__offer-blocks-form-fields-item::placeholder {
   color: #B8B8B8;
 }

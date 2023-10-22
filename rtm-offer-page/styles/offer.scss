@@ -1065,12 +1065,6 @@ body {
               width: 275px;
             }
 
-            &--email {
-              @include for-desktop {
-                order: 1;
-              }
-            }
-
             &::placeholder {
               color: #B8B8B8;
             }

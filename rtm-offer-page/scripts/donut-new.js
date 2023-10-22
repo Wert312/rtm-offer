@@ -21,14 +21,18 @@ const data = {
 
 // Configuration options for the donut chart
 const options = {
-    cutout: 55,
+    datasets: {
+        doughnut: {
+            cutout:'60%'
+        }
+    },
     plugins: {
         legend: {
             display: false,
             position: 'bottom', // Change the legend position to 'top', 'left', 'bottom', or 'right'
         },
     },
-    responsive: false,
+    responsive: true,
     layout: {
         padding: {
             left: 0,
