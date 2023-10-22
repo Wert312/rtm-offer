@@ -37,8 +37,8 @@ const options = {
         },
     },
     borderRadius: {
-        innerStart: 20,
-        outerStart: 20,
+        innerStart: 30,
+        outerStart: 30,
         innerEnd: 1,
         outerEnd: 1,
     },

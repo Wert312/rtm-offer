@@ -15,7 +15,7 @@ html, body {
   max-width: 1200px !important;
 }
 
-.body-bonus {
+.body-main {
   background: #EBFAFF;
 }
 
@@ -35,17 +35,184 @@ body a:visited {
   overflow-y: hidden;
   height: 100%;
 }
-.menu-active::after {
-  z-index: 1000;
-  top: 0;
-  content: "";
-  position: absolute;
+@media (min-width: 768px) {
+  .menu-active::after {
+    z-index: 1000;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background: linear-gradient(132deg, rgba(0, 201, 214, 0.3) 28.5%, rgba(73, 50, 217, 0.3) 98.72%);
+    backdrop-filter: blur(35px);
+    background-size: cover;
+  }
+  .menu-active .main__menu-price-list {
+    display: block;
+  }
+}
+
+.main__menu {
   width: 100%;
   height: 100%;
-  opacity: 1;
-  background: linear-gradient(132deg, rgba(0, 201, 214, 0.3) 28.5%, rgba(73, 50, 217, 0.3) 98.72%);
-  backdrop-filter: blur(35px);
-  background-size: cover;
+  position: absolute;
+  background: white;
+  z-index: 10000;
+  font-family: "Roboto", sans-serif;
+  transition: all 0.35s linear;
+  transform: translateX(-110%);
+}
+@media (min-width: 768px) {
+  .main__menu {
+    max-width: 608px;
+    grid-template-columns: 408px 1fr;
+  }
+}
+@media (min-width: 992px) {
+  .main__menu {
+    max-width: 730px;
+    grid-template-columns: 450px 1fr;
+  }
+}
+@media (min-width: 1200px) {
+  .main__menu {
+    max-width: 778px;
+    grid-template-columns: 498px 1fr;
+  }
+}
+.main__menu--active {
+  display: grid;
+  transform: translateX(0%);
+}
+@media (min-width: 768px) {
+  .main__menu--active {
+    position: fixed;
+  }
+}
+.main__menu-content {
+  height: 100%;
+  width: 100%;
+  padding: 32px 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .main__menu-content {
+    padding: 0;
+    position: relative;
+  }
+}
+.main__menu-content-close-btn-wrapper {
+  position: absolute;
+  top: 32px;
+  right: 20px;
+  display: flex;
+  width: auto;
+  height: auto;
+  margin-left: auto;
+  color: #777777;
+}
+@media (min-width: 768px) {
+  .main__menu-content-close-btn-wrapper {
+    position: absolute;
+    right: -52px;
+    top: 16px;
+    height: 40px;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 6px;
+    color: black;
+    cursor: pointer;
+  }
+}
+.main__menu-content-close-btn-image {
+  display: flex;
+}
+.main__menu-content-list {
+  padding: 0;
+  list-style: none;
+  margin-top: 46px;
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .main__menu-content-list {
+    padding: 60px 48px 0 60px;
+    margin-top: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .main__menu-content-list {
+    padding: 130px 60px 0;
+  }
+}
+.main__menu-content-list-item {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .main__menu-content-list-item {
+    height: 64px;
+    font-size: 24px;
+    padding: 0 11px;
+  }
+  .main__menu-content-list-item:hover {
+    border-radius: 8px;
+    background: #ECECEC;
+  }
+}
+.main__menu-price-list {
+  display: none;
+  background: #EBFAFF;
+  overflow-y: auto;
+}
+.main__menu-price-list-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  padding: 60px 0 48px;
+  overflow-y: auto;
+}
+@media (min-width: 1200px) {
+  .main__menu-price-list-wrapper {
+    gap: 56px;
+    padding: 75px 48px;
+  }
+}
+@media (min-width: 1440px) {
+  .main__menu-price-list-wrapper {
+    gap: 83px;
+  }
+}
+.main__menu-price-list-item-image {
+  width: 121px;
+  height: 150px;
+  display: flex;
+  margin-bottom: 7px;
+}
+.main__menu-price-list-item-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+.main__menu-price-list-item-text {
+  text-align: center;
+  font-family: "Coming Soon", sans-serif;
+  color: #000;
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  margin: 0;
 }
 
 .bonus__container {
