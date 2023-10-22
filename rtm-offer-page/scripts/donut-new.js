@@ -24,21 +24,22 @@ const options = {
     cutoutPercentage: 70, // Adjust to control the size of the hole in the donut
     plugins: {
         legend: {
+            display: false,
             position: 'bottom', // Change the legend position to 'top', 'left', 'bottom', or 'right'
         },
     },
     responsive: false,
     layout: {
         padding: {
-            left: 14,
-            right: 14,
-            top: 15,
+            left: 0,
+            right: 0,
+            top: 12,
             bottom: 0,
         },
     },
     borderRadius: {
-        innerStart: 30,
-        outerStart: 30,
+        innerStart: 1,
+        outerStart: 1,
         innerEnd: 1,
         outerEnd: 1,
     },
