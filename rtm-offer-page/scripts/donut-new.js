@@ -1,13 +1,21 @@
 // Get the canvas element by its ID
-const donutChart = document.getElementById('donutChart').getContext('2d');
+const ctx = document.getElementById('donutChart').getContext('2d');
 
+const gradientIncome = ctx.createLinearGradient(0, 0, 0, 200);
+gradientIncome.addColorStop(0, '#B276FF'); // Start color
+gradientIncome.addColorStop(1, '#FEAB00AB'); // End color
+
+
+const gradientCosts = ctx.createLinearGradient(0, 0, 0, 200);
+gradientCosts.addColorStop(0, '#0082FA'); // Start color
+gradientCosts.addColorStop(1, '#4E7D5C'); // End color
 // Data for the donut chart
 const data = {
     labels: ['income', 'electricity costs'],
     datasets: [
         {
-            data: [30, 40],
-            backgroundColor: ['rgb(255, 99, 132)', 'rgb(75, 192, 192)', 'rgb(255, 205, 86)'],
+            data: [37, 63],
+            backgroundColor: [gradientIncome, gradientCosts ],
         },
     ],
 };
@@ -16,7 +24,8 @@ const data = {
 const options = {
     cutoutPercentage: 50, // Adjust to control the size of the hole in the donut
     legend: {
-        position: 'bottom'
+        display: true,
+        position: 'bottom',
     }
 };
 
