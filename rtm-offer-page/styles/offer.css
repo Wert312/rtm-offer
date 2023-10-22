@@ -469,6 +469,23 @@ body a:visited {
   min-height: 300px;
   padding: 0;
 }
+.rtm__offer-blocks-item--diagram canvas {
+  max-height: 100%;
+  max-width: 100%;
+  margin: auto;
+}
+@media (min-width: 768px) {
+  .rtm__offer-blocks-item--diagram canvas {
+    max-width: 241px;
+    max-height: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .rtm__offer-blocks-item--diagram canvas {
+    max-width: 300px;
+    max-height: 300px;
+  }
+}
 @media (min-width: 768px) {
   .rtm__offer-blocks-item--diagram {
     min-height: 100%;

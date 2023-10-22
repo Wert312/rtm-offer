@@ -27,12 +27,12 @@ const options = {
             position: 'bottom', // Change the legend position to 'top', 'left', 'bottom', or 'right'
         },
     },
-    responsive: true,
+    responsive: false,
     layout: {
         padding: {
-            left: 24,
-            right: 24,
-            top: 25,
+            left: 14,
+            right: 14,
+            top: 15,
             bottom: 0,
         },
     },
@@ -42,9 +42,10 @@ const options = {
         innerEnd: 1,
         outerEnd: 1,
     },
-    weight: 20,
+    borderWidth: 2,
+    weight: 10,
     rotation: 85,
-    spacing: 1,
+    spacing: 2,
     borderAlign: 'center',
 };
 
