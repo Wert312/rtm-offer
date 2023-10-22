@@ -23,7 +23,7 @@ const data = {
 const options = {
     datasets: {
         doughnut: {
-            cutout:'60%'
+            cutout:'65%'
         }
     },
     plugins: {
