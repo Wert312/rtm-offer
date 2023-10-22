@@ -5,7 +5,6 @@ const gradientIncome = ctx.createLinearGradient(0, 0, 0, 200);
 gradientIncome.addColorStop(0, '#B276FF'); // Start color
 gradientIncome.addColorStop(1, '#FEAB00AB'); // End color
 
-
 const gradientCosts = ctx.createLinearGradient(0, 0, 0, 200);
 gradientCosts.addColorStop(0, '#0082FA'); // Start color
 gradientCosts.addColorStop(1, '#4E7D5C'); // End color
@@ -25,13 +24,13 @@ const options = {
     cutoutPercentage: 50, // Adjust to control the size of the hole in the donut
     legend: {
         display: true,
-        position: 'bottom',
+        position: 'right',
     }
 };
 
 // Create the donut chart
 const myDonutChart = new Chart(donutChart, {
     type: 'doughnut',
-    data: data,
-    options: options,
+    data,
+    options,
 });
