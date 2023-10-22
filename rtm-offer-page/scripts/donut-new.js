@@ -32,7 +32,7 @@ const options = {
             position: 'bottom', // Change the legend position to 'top', 'left', 'bottom', or 'right'
         },
     },
-    responsive: true,
+    responsive: false,
     layout: {
         padding: {
             left: 0,
