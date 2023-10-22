@@ -13,7 +13,7 @@ const data = {
     labels: ['income', 'electricity costs'],
     datasets: [
         {
-            data: [37, 63],
+            data: [63, 37],
             backgroundColor: [gradientIncome, gradientCosts ],
         },
     ],
@@ -21,11 +21,31 @@ const data = {
 
 // Configuration options for the donut chart
 const options = {
-    cutoutPercentage: 50, // Adjust to control the size of the hole in the donut
-    legend: {
-        display: true,
-        position: 'right',
-    }
+    cutoutPercentage: 70, // Adjust to control the size of the hole in the donut
+    plugins: {
+        legend: {
+            position: 'bottom', // Change the legend position to 'top', 'left', 'bottom', or 'right'
+        },
+    },
+    responsive: true,
+    layout: {
+        padding: {
+            left: 24,
+            right: 24,
+            top: 25,
+            bottom: 0,
+        },
+    },
+    borderRadius: {
+        innerStart: 20,
+        outerStart: 20,
+        innerEnd: 1,
+        outerEnd: 1,
+    },
+    weight: 20,
+    rotation: 85,
+    spacing: 1,
+    borderAlign: 'center',
 };
 
 // Create the donut chart
