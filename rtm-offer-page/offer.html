@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../rtm-offer-page/styles/normalize.css">
     <link rel="stylesheet" href="../rtm-offer-page/styles/offer.css">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-    <script type="module" src="scripts/donut.js"></script>
+    <script defer type="module" src="../rtm-offer-page/scripts/chart.umd.js"></script>
+    <script defer type="module" src="scripts/donut-new.js"></script>
     <title>RTM Offer</title>
 </head>
 <body class="body-offer">
@@ -30,7 +30,7 @@
                     <path d="M2.62402 2.5L13.124 13L2.62402 23.5" stroke="#777777" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </a>
-            <a href="" class="page-offer__menu-content-list-item">
+            <a href="../rtm-bonus/bonus.html" class="page-offer__menu-content-list-item">
                 Bonus programme
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="26" viewBox="0 0 15 26" fill="none">
                     <path d="M2.62402 2.5L13.124 13L2.62402 23.5" stroke="#777777" stroke-linecap="round" stroke-linejoin="round"/>
@@ -132,11 +132,12 @@
                                 </div>
                             </div>
                             <div class="rtm__offer-blocks-item rtm__offer-blocks-item--diagram">
-                                <div id="doughnutChart">
-                                    <div class="myChartDiv">
-                                        <canvas id="myChart"></canvas>
-                                    </div>
-                                </div>
+<!--                                <div id="doughnutChart">-->
+<!--                                    <div class="myChartDiv">-->
+<!--                                        <canvas id="myChart"></canvas>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+                                <canvas id="donutChart"></canvas>
                             </div>
                         </div>
                         <div class="rtm__offer-blocks-item rtm__offer-blocks-item--payback">
@@ -209,44 +210,6 @@
     menuCloseBtn.addEventListener('click', () => {
         menu.classList.remove('page-offer__menu--active')
         document.body.classList.remove('menu-active')
-    });
-
-
-    Chart.pluginService.register({
-
-        afterUpdate: function(chart) {
-            if (chart.config.options.elements.arc.roundedCornersFor !== undefined) {
-                var arc = chart.getDatasetMeta(0).data[chart.config.options.elements.arc.roundedCornersFor];
-                arc.round = {
-                    x: (chart.chartArea.left + chart.chartArea.right) / 2,
-                    y: (chart.chartArea.top + chart.chartArea.bottom) / 2,
-                    radius: (chart.outerRadius + chart.innerRadius) / 2,
-                    thickness: (chart.outerRadius - chart.innerRadius) / 2,
-                    backgroundColor: "#53A5ED",
-                }
-            }
-        },
-
-        afterDatasetsDraw: function(chart) {
-            if (chart.config.options.elements.arc.roundedCornersFor !== undefined) {
-                var ctx = chart.chart.ctx;
-                var arc = chart.getDatasetMeta(0).data[chart.config.options.elements.arc.roundedCornersFor];
-                var startAngle = Math.PI / 2 - arc._view.startAngle;
-                var endAngle = Math.PI / 2 - arc._view.endAngle;
-
-                ctx.save();
-                ctx.translate(arc.round.x, arc.round.y);
-                ctx.fillStyle = arc.round.backgroundColor;
-                ctx.beginPath();
-                if (chart.config.data.datasets[0].data[0] !== 0) {
-                    ctx.arc(arc.round.radius * Math.sin(endAngle), arc.round.radius * Math.cos(endAngle), arc.round.thickness, 0, 2 * Math.PI);
-                }
-                ctx.fillStyle = "#53A5ED";
-                ctx.closePath();
-                ctx.fill();
-                ctx.restore();
-            }
-        },
     });
 </script>
 </body>

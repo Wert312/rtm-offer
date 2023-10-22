@@ -1,0 +1,109 @@
+@import "../rtm-bonus/styles/mixins";
+
+.rtm__offer {
+  &-modal {
+    &-wrapper {
+      border-radius: 16px;
+      height: 330px;
+      width: 296px;
+      border: 1px solid #E1E1DF;
+      background: #FFF;
+      padding: 20px 17px 40px;
+      z-index: 1000;
+
+      @include for-tablet {
+        width: 500px;
+        height: 367px;
+      }
+
+      @include for-desktop-large {
+        width: 620px;
+      }
+    }
+
+    &-image {
+      &-success {
+        width: 76px;
+        height: 76px;
+        margin-bottom: 48px;
+
+        @include for-tablet {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &-close-btn {
+      text-align: right;
+      cursor: pointer;
+      width: 22px;
+      height: 22px;
+      align-self: flex-end;
+      user-select: none;
+
+      svg {
+        width: 100%;
+        height: 100%;
+        color: #777777;
+        cursor: pointer;
+      }
+    }
+
+    &-title {
+      color: #373737;
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 8px;
+
+      @include for-tablet {
+        margin-top: 28px;
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+
+      @include for-desktop-large {
+        margin-bottom: 0;
+        font-size: 36px;
+      }
+    }
+
+    &-subtitle {
+      color: #777;
+      text-align: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      margin: 0 0 56px 0;
+
+      @include for-tablet {
+        font-size: 16px;
+        margin: 0 0 90px 0;
+      }
+
+      @include for-desktop-large {
+        margin: 0 0 88px 0;
+      }
+    }
+
+    &-btn {
+      color: #373737;
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+
+      @include for-tablet {
+        font-size: 25px;
+      }
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
