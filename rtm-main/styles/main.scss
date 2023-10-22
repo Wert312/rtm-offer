@@ -37,16 +37,19 @@ body {
 .menu-active {
   overflow-y: hidden;
   height: 100%;
-  &::after {
-    z-index: 1000;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 1;
-    background: linear-gradient(132deg, rgba(0, 201, 214, .3) 28.5%, rgba(73, 50, 217, .3) 98.72%);
-    backdrop-filter: blur(35px);
-    background-size: cover;
+
+  @include for-tablet {
+    &::after {
+      z-index: 1000;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      background: linear-gradient(132deg, rgba(0, 201, 214, .3) 28.5%, rgba(73, 50, 217, .3) 98.72%);
+      backdrop-filter: blur(35px);
+      background-size: cover;
+    }
   }
 }
 
@@ -58,8 +61,8 @@ body {
     background: white;
     z-index: 10000;
     font-family: "Roboto", sans-serif;
-    transition: all .3s ease;
-    left: -100vw;
+    transition: all .35s linear;
+    transform: translateX(-110%);
 
     @include for-tablet {
       max-width: 608px;
@@ -78,7 +81,7 @@ body {
 
     &--active {
       display: grid;
-      left: 0;
+      transform: translateX(0%);
 
       @include for-tablet {
         position: fixed;
