@@ -33,6 +33,7 @@ const options = {
         },
     },
     responsive: false,
+    maintainAspectRatio: false,
     layout: {
         padding: {
             left: 0,
