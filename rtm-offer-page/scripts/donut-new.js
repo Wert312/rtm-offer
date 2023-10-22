@@ -21,14 +21,14 @@ const data = {
 
 // Configuration options for the donut chart
 const options = {
-    cutout: 68, // Adjust to control the size of the hole in the donut
+    cutout: 55,
     plugins: {
         legend: {
             display: false,
             position: 'bottom', // Change the legend position to 'top', 'left', 'bottom', or 'right'
         },
     },
-    responsive: true,
+    responsive: false,
     layout: {
         padding: {
             left: 0,
