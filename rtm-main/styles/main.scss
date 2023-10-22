@@ -50,6 +50,10 @@ body {
       backdrop-filter: blur(35px);
       background-size: cover;
     }
+
+    .main__menu-price-list {
+      display: block;
+    }
   }
 }
 
@@ -172,10 +176,6 @@ body {
       display: none;
       background: #EBFAFF;
       overflow-y: auto;
-
-      @include for-tablet {
-        display: block;
-      }
 
       &-wrapper {
         width: 100%;
