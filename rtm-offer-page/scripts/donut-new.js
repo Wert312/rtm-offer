@@ -21,14 +21,14 @@ const data = {
 
 // Configuration options for the donut chart
 const options = {
-    cutoutPercentage: 70, // Adjust to control the size of the hole in the donut
+    cutout: 65, // Adjust to control the size of the hole in the donut
     plugins: {
         legend: {
             display: false,
             position: 'bottom', // Change the legend position to 'top', 'left', 'bottom', or 'right'
         },
     },
-    responsive: false,
+    responsive: true,
     layout: {
         padding: {
             left: 0,
@@ -43,10 +43,9 @@ const options = {
         innerEnd: 1,
         outerEnd: 1,
     },
-    borderWidth: 2,
-    weight: 10,
+    borderWidth: 0,
     rotation: 85,
-    spacing: 2,
+    spacing: 3,
     borderAlign: 'center',
 };
 
