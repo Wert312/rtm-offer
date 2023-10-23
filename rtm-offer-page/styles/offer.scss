@@ -125,6 +125,7 @@ body {
         display: flex;
         flex-direction: column;
         gap: 8px;
+        grid-template-rows: 1fr;
 
         @include for-tablet {
           display: grid;

@@ -125,6 +125,7 @@ body a:visited {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  grid-template-rows: 1fr;
 }
 @media (min-width: 768px) {
   .rtm__offer-blocks-group {
